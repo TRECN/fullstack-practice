@@ -6,3 +6,7 @@ Syntax
     <element attribute="some text in here">
         some text in here
     </element>
+
+<div>
+    no special meaning
+    block element
