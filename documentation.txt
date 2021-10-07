@@ -44,3 +44,6 @@ Syntax
 
 <style>
     for internal css
+
+<script>
+    for internal js
