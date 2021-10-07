@@ -34,7 +34,10 @@ Syntax
 <!-- -->
     comments
 
+<ul>
+    unordered list
 <ol>
     ordered list
+    counting
 <li>
     list items
