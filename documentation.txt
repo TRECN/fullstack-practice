@@ -15,4 +15,4 @@ Syntax
     for writing a paragraph
 
 <h1..2..3..4..5...6>
-    writng headings
+    writing headings
