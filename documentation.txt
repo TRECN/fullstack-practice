@@ -21,3 +21,6 @@ Syntax
     used to create a link
     https is compulsary
     targer= _blank for new tab
+
+<img>
+    for displaying images
