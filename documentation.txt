@@ -16,3 +16,8 @@ Syntax
 
 <h1..2..3..4..5...6>
     writing headings
+
+<a>
+    used to create a link
+    https is compulsary
+    targer= _blank for new tab
