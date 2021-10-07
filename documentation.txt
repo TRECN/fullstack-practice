@@ -3,6 +3,6 @@ HTML??
     scripting language
 
 Syntax
-    <element>
+    <element attribute="some text in here">
         some text in here
     </element>
