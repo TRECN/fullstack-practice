@@ -27,3 +27,6 @@ Syntax
 
 <hr>
     horizontal rule
+
+<br>
+    line break
