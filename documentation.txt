@@ -24,3 +24,6 @@ Syntax
 
 <img>
     for displaying images
+
+<hr>
+    horizontal rule
