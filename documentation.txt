@@ -2,3 +2,5 @@ HTML??
     hypertext markup language
     scripting language
 
+Syntax
+    <element></element>
