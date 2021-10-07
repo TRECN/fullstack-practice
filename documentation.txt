@@ -41,3 +41,6 @@ Syntax
     counting
 <li>
     list items
+
+<style>
+    for internal css
