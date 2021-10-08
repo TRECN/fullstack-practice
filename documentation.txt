@@ -87,3 +87,8 @@ html id
 
 <pre>
     pre tag cares about spaces
+    code tog is used for inline formating
+
+html entities
+    &; is used for displaying any html element
+    eg: &<h1>;
