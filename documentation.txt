@@ -68,3 +68,7 @@ favicon
     
 td
     colspan attribute is used to extend width of the cell 
+    width attribute can be use here too
+
+th
+    for table header
