@@ -108,3 +108,9 @@ forms
     for creating button
 textarea
     for creating text area
+
+<select>
+    is used to create a dropdown menu
+    <option> 
+        to add option to the dropdown menu
+        disabled attribute for disabling the option
