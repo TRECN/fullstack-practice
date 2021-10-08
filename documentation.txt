@@ -76,3 +76,7 @@ th
 inline css
     we can write css of an element
     by using style attribute
+
+html class
+    class attribute is used to name the class of the element
+    it is very useful for setting style collectively 
