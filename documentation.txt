@@ -47,3 +47,6 @@ Syntax
 
 <script>
     for internal js
+
+internal links can be created by using <a>
+    add the link to the id of the element where you want to scroll
