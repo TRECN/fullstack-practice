@@ -84,3 +84,6 @@ html class
 html id
     id attribute is use to add id to the element
     each elemnet should only be one id 
+
+<pre>
+    pre tag cares about spaces
