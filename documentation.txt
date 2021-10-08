@@ -115,3 +115,5 @@ textarea
         to add option to the dropdown menu
         disabled attribute for disabling the option
         selected attribute for default selection
+        
+    required attribute is used to mark an form element as required
