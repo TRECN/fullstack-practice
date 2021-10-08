@@ -64,3 +64,7 @@ favicon
     <tr> for rows
     <td> for table data cell
     border attribute for border
+    width for setting width
+    
+td
+    colspan attribute is used to extend width of the cell 
