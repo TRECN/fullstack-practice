@@ -50,3 +50,7 @@ Syntax
 
 internal links can be created by using <a>
     add the link to the id of the element where you want to scroll
+
+favicon
+    it is the icon of the tab 
+    it is 32x32 px
