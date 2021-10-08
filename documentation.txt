@@ -92,3 +92,9 @@ html id
 html entities
     &; is used for displaying any html element
     eg: &lt; for < and &gt; for >
+    &copy; for copywrite symbol
+
+<sup> 
+    for superscript
+<sub>
+    for subscript
