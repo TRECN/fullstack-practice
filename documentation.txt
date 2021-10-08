@@ -101,3 +101,7 @@ html entities
 
 forms
     <form> is used to create form
+<input>
+    for creating different types of form element
+    type attribute is used to set attribute type
+
