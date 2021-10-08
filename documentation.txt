@@ -104,4 +104,7 @@ forms
 <input>
     for creating different types of form element
     type attribute is used to set attribute type
-
+<button>
+    for creating button
+textarea
+    for creating text area
