@@ -80,3 +80,7 @@ inline css
 html class
     class attribute is used to name the class of the element
     it is very useful for setting style collectively 
+
+html id
+    id attribute is use to add id to the element
+    each elemnet should only be one id 
