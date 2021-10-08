@@ -91,4 +91,4 @@ html id
 
 html entities
     &; is used for displaying any html element
-    eg: &<h1>;
+    eg: &lt; for < and &gt; for >
