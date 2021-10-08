@@ -54,3 +54,7 @@ internal links can be created by using <a>
 favicon
     it is the icon of the tab 
     it is 32x32 px
+    we create it in the head of the website
+    we use link:favicon element
+    type attribute is used to change the img type used in the icon
+    href attribute is used to link the image to the link
