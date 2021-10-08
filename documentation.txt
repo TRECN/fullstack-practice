@@ -72,3 +72,7 @@ td
 
 th
     for table header
+
+inline css
+    we can write css of an element
+    by using style attribute
