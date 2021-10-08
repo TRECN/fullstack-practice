@@ -59,3 +59,8 @@ favicon
     type attribute is used to change the img type used in the icon
     href attribute is used to link the image to the link
 
+<tables>
+    used to create tables
+    <tr> for rows
+    <td> for table data
+    border attribute for border
