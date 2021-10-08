@@ -58,3 +58,4 @@ favicon
     we use link:favicon element
     type attribute is used to change the img type used in the icon
     href attribute is used to link the image to the link
+
