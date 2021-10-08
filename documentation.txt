@@ -98,3 +98,6 @@ html entities
     for superscript
 <sub>
     for subscript
+
+forms
+    <form> is used to create form
