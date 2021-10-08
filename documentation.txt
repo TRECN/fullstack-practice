@@ -62,5 +62,5 @@ favicon
 <tables>
     used to create tables
     <tr> for rows
-    <td> for table data
+    <td> for table data cell
     border attribute for border
