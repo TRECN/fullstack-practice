@@ -114,3 +114,4 @@ textarea
     <option> 
         to add option to the dropdown menu
         disabled attribute for disabling the option
+        selected attribute for default selection
