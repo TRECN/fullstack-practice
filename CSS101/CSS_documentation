@@ -34,3 +34,11 @@ div
 box-shadow:
     syntax: box-shadow: x y blurr "inset" color;
     inset means inside shadow
+
+padding is inside the border 
+margin is outside the border
+
+
+for centering a element using margin
+    display should be block
+    margin: auto; is used
