@@ -100,11 +100,11 @@
         } */
         body{
             background-color: #F0f0f0f0;
-            background-image: url(/CSS101/cssimg.jpg);
+            
             background-size: cover;
 
         }
-        #box{
+        /* #box{
             display: block;
             width: 200px;
             height: 200px;
@@ -112,20 +112,20 @@
             color: red;
             padding:20px;
             background-color: rgba(199, 66, 66,0.5);
-            /* opacity: 0.5; */
+            /* opacity: 0.5; 
 
-        }
+        } */
 
         /* #box{
             width: 200px;
             height: 200px;
             border: 1px solid blue;
-             padding: 20px; 
+             padding: 20px;
 
             padding: 10px 20px 50px 10px;
 
-             margin: auto; 
-            
+             margin: auto;
+
             margin: 50px auto 50px;
             display: block;
 
@@ -135,3 +135,11 @@
             border: 3px solid red;
             max-width: 500px;
         } */
+
+        #floating-img{
+            float: left; 
+            margin: 10px;
+            border: 2px solid rgb(170, 20, 20);
+            box-shadow: 3px 3px 5px  rgb(212, 45, 45);
+
+        }
