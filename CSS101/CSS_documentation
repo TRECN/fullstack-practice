@@ -28,3 +28,5 @@ div
     setting display to inline
     inline-block is used to make the element
     inline but also have the properties of block
+    width and height are only going to work if the 
+    element is block or inline-block
