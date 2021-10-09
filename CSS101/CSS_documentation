@@ -22,4 +22,8 @@ internal css
         . is used to access the class
         # is used to access the id
 
-        
+div
+    is a block element
+    it can be converted to a inline element by
+    setting display to inline
+    
