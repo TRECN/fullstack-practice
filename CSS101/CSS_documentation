@@ -32,4 +32,5 @@ div
     element is block or inline-block
 
 box-shadow:
-    syntax: box-shadow: x y color;
+    syntax: box-shadow: x y blurr "inset" color;
+    inset means inside shadow
