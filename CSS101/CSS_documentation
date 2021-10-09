@@ -2,6 +2,15 @@ CSS
     Cascading style sheet
     a layer on top of html
 
+inline css
+    we can use inline css by adding style 
+    attribute to the element we want to add style
+
 internal css
     we write internal css using <style> tag 
     style tag is defined under header tag
+
+Syntax
+    <style>
+
+    </style>
