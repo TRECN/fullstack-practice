@@ -19,3 +19,5 @@ internal css
         by writing the element name eg: h1, p div
         or by using the class name
         class names are case sensitive 
+        . is used to access the class
+        # is used to access the id
