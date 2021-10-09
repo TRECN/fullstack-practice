@@ -1,3 +1,7 @@
 CSS
     Cascading style sheet
     a layer on top of html
+
+internal css
+    we write internal css using <style> tag 
+    style tag is defined under header tag
