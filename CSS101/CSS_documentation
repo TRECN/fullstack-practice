@@ -26,4 +26,5 @@ div
     is a block element
     it can be converted to a inline element by
     setting display to inline
-    
+    inline-block is used to make the element
+    inline but also have the properties of block
