@@ -14,3 +14,7 @@ internal css
         <style>
             selector{property:value; p2:value2;}
         </style>
+
+        we can target or select an element
+        by writing the element name eg: h1, p div
+        or by using the class name
