@@ -3,8 +3,8 @@
 }
 
 .mid{
-    display: inline;
-    flex-direction: r;
+    display: inline-block;
+    margin: auto;
 }
 .logo{
     display: inline;
