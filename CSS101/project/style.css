@@ -50,6 +50,8 @@ li{
 .hero1_content{
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
+    padding: 100px;
+    color: white;
+    font-size: 30px;
 }
