@@ -9,3 +9,9 @@
 .logo{
     display: inline;
 }
+.content{
+    display: inline-block;
+}
+ul{
+    display: inline-block;
+}
