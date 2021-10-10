@@ -13,7 +13,7 @@
 .logo{
     display: inline;
     padding: 20px;
-    width: 100px;
+    width: 200px;
     text-align: center;
 }
 .imgLogo{
@@ -29,6 +29,8 @@
 }
 li{
     display: inline;
-    padding: 20px;
+    padding: 20px 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
