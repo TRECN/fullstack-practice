@@ -1,13 +1,8 @@
-.navbar{
-    display: block;
-}
-
 .mid{
     display: flex;
+    flex-direction: row;
 }
-.logo{
-    display: inline-block;
-}
+
 .logo img{
 
 }
