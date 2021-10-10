@@ -51,7 +51,15 @@ li{
     width: 100%;
     max-width: 1200px;
     margin:auto;
-    padding: 100px;
+    padding: 150px;
     color: white;
     font-size: 30px;
+}
+.hero1_content a{
+    color: black;
+    text-decoration: none;
+    background-color: white;
+    font-size: 20px;
+    padding: 20px;
+
 }
