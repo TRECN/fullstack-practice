@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar{
@@ -41,7 +42,7 @@ li{
     width: 100%;
     margin: auto;
     height: 700px;  
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(/CSS101/project/assets/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-1600x800.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.8)),url(/CSS101/project/assets/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-1600x800.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center!important;
