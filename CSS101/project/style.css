@@ -41,9 +41,10 @@ li{
     display: block;
     width: 100%;
     margin: auto;
-    height: 700px;  
+    height: 800px;  
     background-image: linear-gradient(rgba(0, 0, 0, 0.627),rgba(0, 0, 0, 0.8)),url(/CSS101/project/assets/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-1600x800.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     align-items: center!important;
 }
@@ -61,6 +62,6 @@ li{
     text-decoration: none;
     background-color: white;
     font-size: 20px;
-    padding: 20px;
+    padding: 10px 35px;
 
 }
