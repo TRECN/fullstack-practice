@@ -9,5 +9,15 @@
     margin: auto;
 }
 .logo{
-    display: inline-block;
+    display: inline;
+    padding: 20px;
+    width: 100px;
+}
+.content{
+    display: inline;
+}
+
+.imgLogo{
+    width: inherit;
+    height: inherit;
 }
