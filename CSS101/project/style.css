@@ -1,7 +1,11 @@
-.mid{
-    display: flex;
+.navbar{
+    display: block;
 }
 
-.logo img{
-
+.mid{
+    display: inline;
+    flex-direction: r;
+}
+.logo{
+    display: inline;
 }
