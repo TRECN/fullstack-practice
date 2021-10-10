@@ -3,15 +3,11 @@
 }
 
 .mid{
-    display: inline-block;
+    width: 70%;
+    height: 10%;
+    display:block;
     margin: auto;
 }
 .logo{
-    display: inline;
-}
-.content{
-    display: inline-block;
-}
-ul{
     display: inline-block;
 }
