@@ -70,4 +70,6 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    font-size: 35px;
 }
