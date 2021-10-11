@@ -64,4 +64,7 @@ overflow:
     overflow:visible
         this the normal form
 
+    centering an block element:
+        we set height and width and then margin:auto
+
     
