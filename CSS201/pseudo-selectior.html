@@ -10,16 +10,20 @@
             border: 1px solid blue;
             padding: 20px;
         }
-        .box:hover{
-            background-color: aliceblue;
+        .box:not(.dont){
+            background-color: blue;
         }
+        .box:hover{
+            background-color: red;
+        }
+        
     </style>
 </head>
 <body>
     <div class="parent">
         <div class="box"></div>
         <div class="box"></div>
-        <div class="box"></div>
+        <div class="box dont"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
