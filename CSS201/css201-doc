@@ -23,8 +23,14 @@ Relative Positioning
         bottom: 
         right:
         left:
-    it is used to slitly shift the element
+    it is used to slightly shift the element
 
 Absolute Positioning
     lets us move an element based on its parent element
     but the parent element should be positionL:reletion
+    we use 
+        top:
+        bottom:
+        right:
+        left:
+    
