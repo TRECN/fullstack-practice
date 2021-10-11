@@ -83,5 +83,8 @@ pseudo element:
     ::before
     ::after
     we use them to meke inline html in css
+    ::first-letter --> targets first letter of the element
+    ::first-line --> targets first line of the element
     
+
     
