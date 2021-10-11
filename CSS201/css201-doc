@@ -53,5 +53,11 @@ sticky positioning
         left:
         right:
 
+overflow:
+    with this we can control the overflowing content
+
+    overflow:hidden;
+        this is used to hide the excess content
+
 
     
