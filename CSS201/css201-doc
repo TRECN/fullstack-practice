@@ -8,3 +8,5 @@ then it sets it to the width and height
 
 outline:
     border on border
+outline-offset:
+    had space between the border and the outline
