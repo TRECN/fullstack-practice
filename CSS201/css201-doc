@@ -71,5 +71,11 @@ advanced selector:
     > child selector
     + adjesent selector: not select the first one
     but the rest one
+    ~ same as +
+
+pseudo selectors:
+    not
+    child
+    hover
 
     
