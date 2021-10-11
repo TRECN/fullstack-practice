@@ -43,4 +43,8 @@ Fixed position
         bottom:
         left:
         right:
+
+sticky positioning
+    it makes the element stick to the parent element
+    we se posion:sticky
     
