@@ -24,3 +24,7 @@ Relative Positioning
         right:
         left:
     it is used to slitly shift the element
+
+Absolute Positioning
+    lets us move an element based on its parent element
+    but the parent element should be positionL:reletion
