@@ -75,7 +75,7 @@ advanced selector:
 
 pseudo selectors:
     not
-    child
+    nth-child
     hover
 
     
