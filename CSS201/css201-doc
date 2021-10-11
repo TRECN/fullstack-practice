@@ -85,6 +85,7 @@ pseudo element:
     we use them to meke inline html in css
     ::first-letter --> targets first letter of the element
     ::first-line --> targets first line of the element
+    ::selection --> when we select any text in the website
     
 
     
