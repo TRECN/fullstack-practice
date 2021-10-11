@@ -17,4 +17,10 @@ text-shadow:
 Css Positioning
 
 Relative Positioning
-    
+    set position: relative;
+    we use
+        top: sfd
+        bottom: 
+        right:
+        left:
+    it is used to slitly shift the element
