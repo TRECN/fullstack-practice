@@ -87,5 +87,9 @@ pseudo element:
     ::first-line --> targets first line of the element
     ::selection --> when we select any text in the website
     
+transition:
+    transition is used to make the change in css smoother or faster
+    syntax
+        element second, .....
 
     
