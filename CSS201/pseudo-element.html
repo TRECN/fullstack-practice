@@ -37,9 +37,27 @@
             left: 30px;
             
         }
+        a{
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+        a::before{
+            content: ' ' ;
+            width: 100%;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+
     </style>
 </head>
 <body>
     <div class="box"></div>
+    <hr>
+    <p>Lorem ipsum dolor <a href="">hover on it</a> sit amet consectetur adipisicing elit. Illo fugiat repudiandae obcaecati provident ab, quia eius. Repellendus consequatur error similique sapiente eaque sit eius, excepturi beatae explicabo. Numquam, dicta rem?</p>
 </body>
 </html>
