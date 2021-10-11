@@ -61,5 +61,7 @@ overflow:
     overflow:auto;
         this is used to add a scroll bar to the element
         with extra content
+    overflow:visible
+        this the normal form
 
     
