@@ -92,4 +92,7 @@ transition:
     syntax
         element second, .....
 
+gradient:
+    linear-gradient:direction deg color, color
+
     
