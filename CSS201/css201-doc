@@ -2,3 +2,6 @@
     block 
     inline 
     inline-block
+
+box-sizing border-box does is that it combines all the padding and
+then it sets it to the width and height
