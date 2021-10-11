@@ -47,4 +47,11 @@ Fixed position
 sticky positioning
     it makes the element stick to the parent element
     we se posion:sticky
+    we use:
+    top:
+        bottom:
+        left:
+        right:
+
+
     
