@@ -80,4 +80,8 @@ pseudo selectors:
 
 pseudo element:
     we use:: make pseudo element
+    ::before
+    ::after
+    we use them to meke inline html in css
+    
     
