@@ -78,4 +78,6 @@ pseudo selectors:
     nth-child
     hover
 
+pseudo element:
+    we use:: make pseudo element
     
