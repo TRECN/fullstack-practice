@@ -64,7 +64,12 @@ overflow:
     overflow:visible
         this the normal form
 
-    centering an block element:
-        we set height and width and then margin:auto
+centering an block element:
+    we set height and width and then margin:auto
+
+advanced selector:
+    > child selector
+    + adjesent selector: not select the first one
+    but the rest one
 
     
