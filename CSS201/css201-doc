@@ -10,3 +10,6 @@ outline:
     border on border
 outline-offset:
     had space between the border and the outline
+
+text-shadow:
+    syntax: x y blurr color
