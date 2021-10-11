@@ -35,4 +35,12 @@ Absolute Positioning
         left:
 
 Fixed position
+    it makes the element stick to the position it has
+    been specified to
+    we set positon:fixed
+    and we use
+        top:
+        bottom:
+        left:
+        right:
     
