@@ -58,6 +58,8 @@ overflow:
 
     overflow:hidden;
         this is used to hide the excess content
-
+    overflow:auto;
+        this is used to add a scroll bar to the element
+        with extra content
 
     
