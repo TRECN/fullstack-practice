@@ -1,7 +1,5 @@
 const box = document.querySelector(".box");
-const defaultBtn = document.querySelector("#default-btn");
-const img = document.getElementById("#image").style.background;
-         
+const defaultBtn = document.querySelector("#default-btn");    
 function btnActive(){
     defaultBtn.click();
 }
@@ -11,8 +9,9 @@ defaultBtn.addEventListener("change", function(){
         const reader = new FileReader();
         reader.onload = function(){
             const result = reader.result;
-               img='url('+result+')';
-               box.classList.add("active");
+            document.getElementById("image").style.cssText+=`background-image:url(${result})`;
+            console.log(result)
+            box.classList.add("active");
         }
         reader.readAsDataURL(file);
     }
