@@ -105,6 +105,7 @@ Tansformation:
     inside which we use translate 
     translate(x,y)
     rotate(deg)
+    scale()
 
 
 
