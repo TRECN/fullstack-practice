@@ -15,15 +15,31 @@
             top: 0;
             left: 0;
             animation-name: slideme;
-            animation-duration:4s ;
+            animation-duration:2s ;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
         }
-        @keyframes slideme{
+        /* @keyframes slideme{
             from{
                 top:0;
                 left: 0;
             }
             to{
                 left: 100%;
+            }
+        } */
+
+        @keyframes slideme {
+            0%{
+                top: 0;
+                left: 0;
+            }
+            50%{
+                background-color: black;
+            }
+            100%{
+                background-color: yellow;
+                left: 90%;
             }
         }
     </style>
