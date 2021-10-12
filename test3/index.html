@@ -1,0 +1,1522 @@
+<html>  
+    <head>  
+        <title>FIND X Image Cropper</title>  
+		
+		<script src="jquery.min.js"></script>  
+		<script src="bootstrap.min.js"></script>
+		<script src="croppie.js"></script>
+		<link rel="stylesheet" href="bootstrap.min.css" />
+		<link rel="stylesheet" href="croppie.css" />
+		
+		<style>
+		    .img-thumbnail {
+                display: inline-block;
+                max-height: 200px!important;
+                max-width:200px!important;
+		        
+		    }
+		    
+		    .frame_size{
+		        background:white;
+		        padding:10px 20px;
+		        margin-bottom:10px;
+		    }
+		    
+		    .frame_size p{
+		        padding:0px;
+		        margin:0px;
+		        color:#8c8c8c;
+		    }
+		    
+		    
+		    .croppie-container .cr-viewport, .croppie-container .cr-resizer {
+                position: absolute;
+                border: 2px solid #fff;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                box-shadow: 0 0 2000px 2000px rgb(0 0 0 / 42%);
+                z-index: 0;
+            }
+            
+            
+            .right-side-bar::-webkit-scrollbar {
+                display: none;
+            }
+            
+            
+            .image-upload > input {
+              visibility:hidden;
+              width:0;
+              height:0
+            }
+            
+            .active{
+                border: 3px solid #dc5780;
+            }
+        
+        
+        .lds-facebook {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 30px;
+        }
+        .lds-facebook div {
+          display: inline-block;
+          position: absolute;
+          margin-top:-20px;
+          left: 8px;
+          width: 10px;
+          background: #fff;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+        }
+        .lds-facebook div:nth-child(1) {
+          left: 8px;
+          animation-delay: -0.24s;
+        }
+        .lds-facebook div:nth-child(2) {
+          left: 22px;
+          animation-delay: -0.12s;
+        }
+        .lds-facebook div:nth-child(3) {
+          left: 35px;
+          animation-delay: 0;
+        }
+        
+        .display_none{
+            display:none;
+        }
+        
+        .display_inline{
+            display:inline;
+        }
+        
+        
+        @keyframes lds-facebook {
+          0% {
+            top: 8px;
+            height: 64px;
+          }
+          50%, 100% {
+            top: 24px;
+            height: 32px;
+          }
+        }
+
+		    
+		</style>
+    </head>  
+    <body>  
+        <div class="container">
+          <br />
+          <h3 align="center">FIND X Image Cropper</h3>
+          <br />
+          <br />
+          
+			<div class="row">
+  		        <div class="col-md-6" align="center">
+  		            
+  		            
+				    <div style="min-height:250px;">
+				            <div class="photo-frame">
+				                <img class="photo-frame-img" style="position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;height:350px;">
+				                <div style="" id="image_demo" style="margin-top:30px"></div>
+				            </div>
+				            
+				            
+				    </div>
+				    
+				    <div class="image-upload">
+                      <label for="upload_image" style="width:100%;">
+                        <div style="width:100%;border: 3px solid #dc5780;padding:10px;color:#dc5780;"> Select Image </div>
+                      </label>
+                    
+                        <input type="file" name="upload_image" id="upload_image" />
+                     
+                    </div>
+                    
+                    <button class="apply-frame">Apply Frame</button>
+				    <button class="remove-frame">Edit Frame</button>
+				    
+				    
+				    <h4 align="left">Zusammenfassung</h4>
+				    <table width="100%">
+				        <tr>
+				            <td> Produkt: </td>
+				            <td align="right"> <p id="product_name">Leinwand 40x30</p> </td>
+				        </tr>
+				        <tr>
+				            <td> Format: </td>
+				            <td align="right"> <p> <font id="height">40</font> x <font id="width">30</font> cm</p></td>
+				        </tr>
+				        <tr>
+				            <td> Randart: </td>
+				            <td align="right"> Gezerrt </td>
+				        </tr>
+				        <tr>
+				            <td> Firnis: </td>
+				            <td align="right"> Ja </td>
+				        </tr>
+				        <tr>
+				            <td> Anzahl: </td>
+				            <td align="right">
+				                <select>
+				                    <option>1</option>
+				                    <option>2</option>
+				                    <option>3</option>
+				                    <option>4</option>
+				                </select>    
+				            </td>
+				        </tr>
+				    </table>
+				    
+				   
+				    <div style="border-bottom:3px solid  #dc5780;width:100%;margin-top:20px;"></div>
+				    
+				    <table width="100%">
+				        <tr>
+				            <td align="left"><h3>Preis: </h3></td>
+				            <td align="right"><h3 style="color: #dc5780;" id="TotalPrixe">69,90</h3></td>
+				        </tr>
+				    </table>
+				    
+				    
+					<br />
+					<br>
+					<button class="btn" style="width:100%;border:3px solid #dc5780;background:transparent;border-radius:0px;margin-bottom:15px;">DODAJ I STWORZ KOLEJNE</button>
+					<button class="btn crop_image" style="width:100%;border:3px solid #dc5780;background:#dc5780;border-radius:0px;color:white;height:40px;">Crop & Upload Image <div class="lds-facebook"><div></div><div></div><div></div></div></button>
+                    
+                    					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<br />
+					<div style="height:300px;margin-top:20px;" id="uploaded_image"></div>
+  					<br />
+  					<br/>
+					
+					
+					
+					
+					
+  		        </div>
+  		        <div class="col-md-6 right-side-bar"  style="overflow:scroll;overflow-x:hidden;height:100vh;">
+  		            
+  		            
+					
+				
+					<div class="card">
+                      <div class="card-body" style="background-color:#efefef;padding:20px;">
+                          
+                          <div id="select_frame_mode" class=""></div>
+                          <input type="text" id="selected_frame_type" value="Keilrahmen">
+                          
+                          
+                          <h4>Bildrahmen wahlen:</h4>
+                        <table>
+                            <tr>
+                                
+                                <td width="100px">
+                                    <font style="font-size:12px;margin-bottom:10px;">Keilrahmen</font><br>
+                                    <img id="Keilrahmen"  class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                
+                                
+                                <td width="100px">
+                                    <font style="font-size:12px;">LITE Black</font><br>
+                                    <img id="LITE_black" class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                <td width="100px">
+                                    <font style="font-size:12px;">LITE White</font><br>
+                                    <img id="LITE_white" class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <td width="100px" style="padding-top:15px;">
+                                    <font style="font-size:12px;">PREMIUM <br> Silver</font><br>
+                                    <img id="PREMIUM_silver" class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                <td width="100px" style="padding-top:15px;">
+                                    <font style="font-size:12px;">PREMIUM  <br>  Black Silver</font><br>
+                                    <img id="PREMIUM_black_silver" class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                <td width="100px" style="padding-top:15px;">
+                                    <font style="font-size:12px;">PREMIUM  <br>  Golden</font><br>
+                                    <img id="PREMIUM_golden" class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                <td width="100px" style="padding-top:15px;">
+                                    <font style="font-size:12px;">PREMIUM  <br>  Golden Green</font><br>
+                                    <img id="PREMIUM_golden_green" class="frame_type" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                            </tr>
+                            
+                        </table>
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="card" style="margin-top:20px;">
+                      <div class="card-body" style="background-color:#efefef;padding:20px;">
+                        
+                        <input type="text" id="selected_frame_size" value="fs30x20">
+                        
+                        <table>
+                            <tr>
+                                <td style="padding-right:20px;">
+                                    <p>Vertikal: </p>
+                                    <div id="fs30x20" class="frame_size"><p>30 X 20</p></div>
+                                    <div id="fs40x30" class="frame_size"><p>40 X 30</p></div>
+                                    <div id="fs50x30" class="frame_size"><p>50 X 30</p></div>
+                                    <div id="fs60x40" class="frame_size"><p>60 X 40</p></div>
+                                    <div id="fs80x60" class="frame_size"><p>80 X 60</p></div>
+                                    <div id="fs90x60" class="frame_size"><p>90 X 60</p></div>
+                                    <div id="fs100x50" class="frame_size"><p>100 X 50</p></div>
+                                    <div id="fs120x40" class="frame_size"><p>120 X 40</p></div>
+                                    <div id="fs120x80" class="frame_size"><p>120 X 80</p></div>
+                                </td>
+                                <td style="padding-right:20px;">
+                                    <p>Horizontal: </p>
+                                    <div id="fs20x30" class="frame_size"><p>20 X 30</p></div>
+                                    <div id="fs30x40" class="frame_size"><p>30 X 40</p></div>
+                                    <div id="fs30x50" class="frame_size"><p>30 X 50</p></div>
+                                    <div id="fs40x60" class="frame_size"><p>40 X 60</p></div>
+                                    <div id="fs60x80" class="frame_size"><p>60 X 80</p></div>
+                                    <div id="fs60x90" class="frame_size"><p>60 X 90</p></div>
+                                    <div id="fs50x100" class="frame_size"><p>50 X 100</p></div>
+                                    <div id="fs40x120" class="frame_size"><p>40 X 120</p></div>
+                                    <div id="fs80x120" class="frame_size"><p>80 X 120</p></div>
+                                </td>
+                                <td style="vertical-align: text-bottom;">
+                                    <p>Quadratisch: </p>
+                                    <div id="fs30x30" class="frame_size"><p>30 X 30</p></div>
+                                    <div id="fs40x40" class="frame_size"><p>40 X 40</p></div>
+                                    <div id="fs50x50" class="frame_size"><p>50 X 50</p></div>
+                                    <div id="fs60x60" class="frame_size"><p>60 X 60</p></div>
+                                    <div id="fs80x80" class="frame_size"><p>80 X 80</p></div>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                        
+                        
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="card" style="margin-top:20px;">
+                      <div class="card-body" style="background-color:#efefef;padding:20px;">
+                          
+                          <input type="text" id="Leinwandgewebe" value="baumwolle">
+                          
+                        <h3>Leinwandgewebe wahlen:</h3>
+                        <table>
+                            <tr>
+                                <td width="100px">
+                                    <font style="font-size:12px;">Baumwolle</font><br>
+                                    <img id="baumwolle" class="leinwandgewebe" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                <td width="100px">
+                                    <font style="font-size:12px;">Polyester</font><br>
+                                    <img id="polyester" class="leinwandgewebe" src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                            </tr>
+                            
+                        </table>
+                        
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="card" style="margin-top:20px;">
+                      <div class="card-body" style="background-color:#efefef;padding:20px;">
+                        <h3>Randart Wahlen:</h3>
+                        <table>
+                            <tr>
+                                <td width="100px">
+                                    <font style="font-size:12px;">Gefaltet</font><br>
+                                    <img src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                                <td width="100px">
+                                    <font style="font-size:12px;">Gespiegelt</font><br>
+                                    <img src="frame_type/select_img_01.png" width="80px" height="80px">
+                                </td>
+                                
+                            </tr>
+                            
+                        </table>
+                        
+                      </div>
+                    </div>
+                    
+				    
+				    
+				    <div class="card" style="margin-top:20px;">
+                      <div class="card-body" style="background-color:#efefef;padding:20px;">
+                          <input type="text" id="lack" value="ja">
+                        <h3>Lack:</h3>
+                        <table>
+                            <tr>
+                                <td width="100px">
+                                    <div id="ja" class="lack"><p>Ja</p></div>
+                                </td>
+                                
+                                <td width="100px">
+                                    <div id="keine" class="lack"><p>Keine</p></div>
+                                </td>
+                                
+                            </tr>
+                            
+                        </table>
+                        
+                      </div>
+                    </div>
+                    	
+  		            
+  		        
+  		        
+  		        
+  		        </div>
+  		    </div>
+  			
+  			
+  		
+  		</div>
+    </body>  
+</html>
+
+
+
+
+
+<script>  
+$(document).ready(function(){
+
+
+const LITE_black = ["20x30", "30x20", "30x30", "30x40", "40x30", "40x40", "40x60", "50x50", "60x40"];
+const LITE_white = ["20x30", "30x20", "30x30", "30x40", "40x30", "40x40", "40x60", "50x50", "60x40"];
+const PREMIUM_black_silver = ["30x40", "40x30", "40x60", "50x50", "60x40", "60x60", "60x80", "60x90", "80x60", "80x80", "90x60"];
+const PREMIUM_golden = ["30x40", "40x30", "40x60", "50x50", "60x40", "60x60", "60x80", "60x90", "80x60", "80x80", "90x60"];
+const PREMIUM_golden_green = ["30x40", "40x30", "40x60", "50x50", "60x40", "60x60", "60x80", "60x90", "80x60", "80x80", "90x60"];
+const PREMIUM_silver = ["30x40", "40x30", "40x60", "50x50", "60x40", "60x60", "60x80", "60x90", "80x60", "80x80", "90x60"];
+
+function ProductProcess(frameSizeID,FrameTypeId,leinwandgewebeID, RandartID, lackID){
+    var selectID = frameSizeID;
+    var frameSize = selectID.substring(2);
+    var frameHeight = frameSize.split("x")[0];
+    var frameWidth = frameSize.split("x")[1];
+    
+    var frame_type = FrameTypeId;
+    var outer_frame_id = frame_type+'_'+selectID;
+    
+    var indexID = frame_type+'_'+selectID;
+    
+    //alert(Product_Name_list['Keilrahmen_fs30x20']);
+    
+    var ProductUnitPrice;
+    
+    if(leinwandgewebeID == "baumwolle"){
+        ProductUnitPrice = Frame_Prices_Baumwolle[indexID];
+        
+
+    }else{
+        ProductUnitPrice = Frame_Prices_Polyester[indexID];
+    }
+    
+   var Selected_ProductName = Product_Name_list[indexID];
+   
+   
+   $('#product_name').html(Selected_ProductName);
+   $('#height').html(frameHeight);
+   $('#width').html(frameWidth);
+   $('#TotalPrixe').html(ProductUnitPrice);
+   
+   
+
+   
+   
+   $(".frame_size").removeClass("active");
+   $("#"+selectID).addClass("active");
+   
+   
+    //alert(frameHeight);
+    //alert(frameWidth);
+    
+    var frame_img_url = 'frame/'+frame_type + '/' + frameHeight + 'x' + frameWidth + '.png';
+    //alert(frame_img_url);
+    
+    var original_height = frameHeight;
+    var original_width = frameWidth;
+    
+    
+    var viewport_height = 180;
+    var viewport_width =  (original_width / original_height) * viewport_height;
+
+    var frame_width = viewport_width + Frame_IMG_Width[outer_frame_id];
+    var frame_height = viewport_height + Frame_IMG_Height[outer_frame_id];
+
+
+    $("#select_frame_mode").addClass("lite_black");
+    
+    $(".cr-boundary").css("width", frame_width);    
+    $(".cr-boundary").css("height", frame_height);
+    
+
+    $(".photo-frame-img").attr("src", frame_img_url);
+    
+    //$(".cr-boundary").css("background", "url('frame/LITE_black/czarna_30x20.png')");
+    //$(".cr-boundary").css("background-size", "contain");
+    //$(".cr-boundary").css("background-repeat", "no-repeat");
+    
+    
+    $(".photo-frame-img").css("width", frame_width);    
+    $(".photo-frame-img").css("height", frame_height);
+    
+    $(".cr-viewport").css("width", viewport_width);    
+    $(".cr-viewport").css("height", viewport_height);
+    
+    $(".cr-viewport").css("box-shadow", "0 0 2000px 2000px rgb(0 0 0 / 42%)");
+    
+    $(".cr-boundary").css("width", frame_width);    
+    $(".cr-boundary").css("height", frame_height);
+}
+
+
+var Product_Name_list = {
+    
+    'Keilrahmen_fs30x20': 'Leinwand 30x20',
+    'Keilrahmen_fs40x30': 'Leinwand 40x30',
+    'Keilrahmen_fs50x30': 'Leinwand 50x30',
+    'Keilrahmen_fs60x40': 'Leinwand 60x40',
+    'Keilrahmen_fs80x60': 'Leinwand 80x60',
+    'Keilrahmen_fs90x60': 'Leinwand 90x60',
+    'Keilrahmen_fs100x50': 'Leinwand 100x50',
+    'Keilrahmen_fs120x40': 'Leinwand 120x40',
+    'Keilrahmen_fs120x80': 'Leinwand 120x80',
+    
+    'Keilrahmen_fs20x30': 'Leinwand 20x30',
+    'Keilrahmen_fs30x40': 'Leinwand 30x40',
+    'Keilrahmen_fs30x50': 'Leinwand 30x50',
+    'Keilrahmen_fs40x60': 'Leinwand 40x60',
+    'Keilrahmen_fs60x80': 'Leinwand 60x80',
+    'Keilrahmen_fs60x90': 'Leinwand 60x90',
+    'Keilrahmen_fs50x100': 'Leinwand 50x100',
+    'Keilrahmen_fs40x120': 'Leinwand 40x120',
+    'Keilrahmen_fs80x120': 'Leinwand 80x120',
+    
+    'Keilrahmen_fs30x30': 'Fotoleinwand 30x30',
+    'Keilrahmen_fs40x40': 'Fotoleinwand 40x40',
+    'Keilrahmen_fs50x50': 'Fotoleinwand 50x50',
+    'Keilrahmen_fs60x60': 'Fotoleinwand 60x60',
+    'Keilrahmen_fs80x80': 'Fotoleinwand 80x80',
+    'Keilrahmen_fs100x100': 'Fotoleinwand 100x100',
+    
+    
+    'LITE_black_fs30x20': 'Leinwand 30x20 mit LITE Rahmen',
+    'LITE_black_fs40x30': 'Leinwand 40x30 mit LITE Rahmen',
+    'LITE_black_fs60x40': 'Leinwand 60x40 mit LITE Rahmen',
+    
+    'LITE_black_fs20x30': 'Leinwand 20x30 mit LITE Rahmen',
+    'LITE_black_fs30x40': 'Leinwand 30x40 mit LITE Rahmen',
+    'LITE_black_fs40x60': 'Leinwand 40x60 mit LITE Rahmen',
+    
+    'LITE_black_fs30x30': 'Fotoleinwand 30x30 mit LITE Rahmen',
+    'LITE_black_fs40x40': 'Fotoleinwand 40x40 mit LITE Rahmen',
+    'LITE_black_fs50x50': 'Fotoleinwand 50x50 mit LITE Rahmen',
+    
+    
+    
+    
+    'LITE_white_fs30x20': 'Leinwand 30x20 mit LITE Rahmen',
+    'LITE_white_fs40x30': 'Leinwand 40x30 mit LITE Rahmen',
+    'LITE_white_fs60x40': 'Leinwand 60x40 mit LITE Rahmen',
+    
+    'LITE_white_fs20x30': 'Leinwand 20x30 mit LITE Rahmen',
+    'LITE_white_fs30x40': 'Leinwand 30x40 mit LITE Rahmen',
+    'LITE_white_fs40x60': 'Leinwand 40x60 mit LITE Rahmen',
+    
+    'LITE_white_fs30x30': 'Fotoleinwand 30x30 mit LITE Rahmen',
+    'LITE_white_fs40x40': 'Fotoleinwand 40x40 mit LITE Rahmen',
+    'LITE_white_fs50x50': 'Fotoleinwand 50x50 mit LITE Rahmen',
+    
+    
+    
+    
+    'PREMIUM_silver_fs40x30': 'Leinwand 40x30 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs60x40': 'Leinwand 60x40 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs80x60': 'Leinwand 80x60 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs90x60': 'Leinwand 90x60 mit PREMIUM Rahmen',
+    
+    'PREMIUM_silver_fs30x40': 'Leinwand 30x40 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs40x60': 'Leinwand 40x60 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs60x80': 'Leinwand 60x80 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs60x90': 'Leinwand 60x90 mit PREMIUM Rahmen',
+    
+    'PREMIUM_silver_fs50x50': 'Fotoleinwand 50x50 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs60x60': 'Fotoleinwand 60x60 mit PREMIUM Rahmen',
+    'PREMIUM_silver_fs80x80': 'Fotoleinwand 80x80 mit PREMIUM Rahmen',
+    
+    
+    
+    
+    'PREMIUM_black_silver_fs40x30': 'Leinwand 40x30 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs60x40': 'Leinwand 60x40 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs80x60': 'Leinwand 80x60 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs90x60': 'Leinwand 90x60 mit PREMIUM Rahmen',
+    
+    'PREMIUM_black_silver_fs30x40': 'Leinwand 30x40 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs40x60': 'Leinwand 40x60 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs60x80': 'Leinwand 60x80 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs60x90': 'Leinwand 60x90 mit PREMIUM Rahmen',
+    
+    'PREMIUM_black_silver_fs50x50': 'Fotoleinwand 50x50 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs60x60': 'Fotoleinwand 60x60 mit PREMIUM Rahmen',
+    'PREMIUM_black_silver_fs80x80': 'Fotoleinwand 80x80 mit PREMIUM Rahmen',
+    
+    
+    
+    'PREMIUM_golden_fs40x30': 'Leinwand 40x30 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs60x40': 'Leinwand 60x40 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs80x60': 'Leinwand 80x60 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs90x60': 'Leinwand 90x60 mit PREMIUM Rahmen',
+    
+    'PREMIUM_golden_fs30x40': 'Leinwand 30x40 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs40x60': 'Leinwand 40x60 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs60x80': 'Leinwand 60x80 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs60x90': 'Leinwand 60x90 mit PREMIUM Rahmen',
+    
+    'PREMIUM_golden_fs50x50': 'Fotoleinwand 50x50 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs60x60': 'Fotoleinwand 60x60 mit PREMIUM Rahmen',
+    'PREMIUM_golden_fs80x80': 'Fotoleinwand 80x80 mit PREMIUM Rahmen',
+    
+    
+    
+    'PREMIUM_golden_green_fs40x30': 'Leinwand 40x30 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs60x40': 'Leinwand 60x40 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs80x60': 'Leinwand 80x60 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs90x60': 'Leinwand 90x60 mit PREMIUM Rahmen',
+    
+    'PREMIUM_golden_green_fs30x40': 'Leinwand 30x40 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs40x60': 'Leinwand 40x60 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs60x80': 'Leinwand 60x80 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs60x90': 'Leinwand 60x90 mit PREMIUM Rahmen',
+    
+    'PREMIUM_golden_green_fs50x50': 'Fotoleinwand 50x50 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs60x60': 'Fotoleinwand 60x60 mit PREMIUM Rahmen',
+    'PREMIUM_golden_green_fs80x80': 'Fotoleinwand 80x80 mit PREMIUM Rahmen'
+    
+    
+};
+
+
+
+var Frame_Prices_Polyester = {
+    
+    'Keilrahmen_fs30x20': 10,
+    'Keilrahmen_fs40x30': 13,
+    'Keilrahmen_fs50x30': 16,
+    'Keilrahmen_fs60x40': 20,
+    'Keilrahmen_fs80x60': 33,
+    'Keilrahmen_fs90x60': 37,
+    'Keilrahmen_fs100x50': 38,
+    'Keilrahmen_fs120x40': 40,
+    'Keilrahmen_fs120x80': 52,
+    
+    'Keilrahmen_fs20x30': 10,
+    'Keilrahmen_fs30x40': 13,
+    'Keilrahmen_fs30x50': 16,
+    'Keilrahmen_fs40x60': 20,
+    'Keilrahmen_fs60x80': 33,
+    'Keilrahmen_fs60x90': 37,
+    'Keilrahmen_fs50x100': 38,
+    'Keilrahmen_fs40x120': 40,
+    'Keilrahmen_fs80x120': 52,
+    
+    'Keilrahmen_fs30x30': 11,
+    'Keilrahmen_fs40x40': 15,
+    'Keilrahmen_fs50x50': 20,
+    'Keilrahmen_fs60x60': 26,
+    'Keilrahmen_fs80x80': 39,
+    'Keilrahmen_fs100x100': 54,
+    
+    
+    'LITE_black_fs30x20': 22,
+    'LITE_black_fs40x30': 29,
+    'LITE_black_fs60x40': 40,
+    
+    'LITE_black_fs20x30': 22,
+    'LITE_black_fs30x40': 29,
+    'LITE_black_fs40x60': 40,
+    
+    'LITE_black_fs30x30': 27,
+    'LITE_black_fs40x40': 39,
+    'LITE_black_fs50x50': 49,
+    
+    
+    
+    
+    'LITE_white_fs30x20': 22,
+    'LITE_white_fs40x30': 29,
+    'LITE_white_fs60x40': 40,
+    
+    'LITE_white_fs20x30': 22,
+    'LITE_white_fs30x40': 29,
+    'LITE_white_fs40x60': 40,
+    
+    'LITE_white_fs30x30': 27,
+    'LITE_white_fs40x40': 39,
+    'LITE_white_fs50x50': 49,
+    
+    
+    
+    
+    'PREMIUM_silver_fs40x30': 63,
+    'PREMIUM_silver_fs60x40': 92,
+    'PREMIUM_silver_fs80x60': 137,
+    'PREMIUM_silver_fs90x60': 147,
+    
+    'PREMIUM_silver_fs30x40': 63,
+    'PREMIUM_silver_fs40x60': 92,
+    'PREMIUM_silver_fs60x80': 137,
+    'PREMIUM_silver_fs60x90': 147,
+    
+    'PREMIUM_silver_fs50x50': 92,
+    'PREMIUM_silver_fs60x60': 114,
+    'PREMIUM_silver_fs80x80': 157,
+    
+    
+    
+    
+    'PREMIUM_black_silver_fs40x30': 63,
+    'PREMIUM_black_silver_fs60x40': 92,
+    'PREMIUM_black_silver_fs80x60': 137,
+    'PREMIUM_black_silver_fs90x60': 147,
+    
+    'PREMIUM_black_silver_fs30x40': 63,
+    'PREMIUM_black_silver_fs40x60': 92,
+    'PREMIUM_black_silver_fs60x80': 137,
+    'PREMIUM_black_silver_fs60x90': 147,
+    
+    'PREMIUM_black_silver_fs50x50': 92,
+    'PREMIUM_black_silver_fs60x60': 114,
+    'PREMIUM_black_silver_fs80x80': 157,
+    
+    
+    
+    'PREMIUM_golden_fs40x30': 63,
+    'PREMIUM_golden_fs60x40': 92,
+    'PREMIUM_golden_fs80x60': 137,
+    'PREMIUM_golden_fs90x60': 147,
+    
+    'PREMIUM_golden_fs30x40': 63,
+    'PREMIUM_golden_fs40x60': 92,
+    'PREMIUM_golden_fs60x80': 137,
+    'PREMIUM_golden_fs60x90': 147,
+    
+    'PREMIUM_golden_fs50x50': 92,
+    'PREMIUM_golden_fs60x60': 114,
+    'PREMIUM_golden_fs80x80': 157,
+    
+    
+    
+    'PREMIUM_golden_green_fs40x30': 63,
+    'PREMIUM_golden_green_fs60x40': 92,
+    'PREMIUM_golden_green_fs80x60': 137,
+    'PREMIUM_golden_green_fs90x60': 147,
+    
+    'PREMIUM_golden_green_fs30x40': 63,
+    'PREMIUM_golden_green_fs40x60': 92,
+    'PREMIUM_golden_green_fs60x80': 137,
+    'PREMIUM_golden_green_fs60x90': 92,
+    
+    'PREMIUM_golden_green_fs50x50': 92,
+    'PREMIUM_golden_green_fs60x60': 114,
+    'PREMIUM_golden_green_fs80x80': 157
+    
+    
+};
+
+
+var Frame_Prices_Baumwolle = {
+    
+    
+    'Keilrahmen_fs30x20': 12,
+    
+    'Keilrahmen_fs40x30': 16,
+    'Keilrahmen_fs50x30': 20,
+    'Keilrahmen_fs60x40': 24,
+    'Keilrahmen_fs80x60': 37,
+    'Keilrahmen_fs90x60': 43,
+    'Keilrahmen_fs100x50': 45,
+    'Keilrahmen_fs120x40': 49,
+    'Keilrahmen_fs120x80': 65,
+    
+    'Keilrahmen_fs20x30': 12,
+    'Keilrahmen_fs30x40': 16,
+    'Keilrahmen_fs30x50': 20,
+    'Keilrahmen_fs40x60': 24,
+    'Keilrahmen_fs60x80': 37,
+    'Keilrahmen_fs60x90': 43,
+    'Keilrahmen_fs50x100': 45,
+    'Keilrahmen_fs40x120': 49,
+    'Keilrahmen_fs80x120': 65,
+    
+    'Keilrahmen_fs30x30': 14,
+    'Keilrahmen_fs40x40': 18,
+    'Keilrahmen_fs50x50': 25,
+    'Keilrahmen_fs60x60': 30,
+    'Keilrahmen_fs80x80': 43,
+    'Keilrahmen_fs100x100': 54,
+    
+    
+    'LITE_black_fs30x20': 27,
+    'LITE_black_fs40x30': 33,
+    'LITE_black_fs60x40': 45,
+    
+    'LITE_black_fs20x30': 27,
+    'LITE_black_fs30x40': 33,
+    'LITE_black_fs40x60': 45,
+    
+    'LITE_black_fs30x30': 31,
+    'LITE_black_fs40x40': 43,
+    'LITE_black_fs50x50': 53,
+    
+    
+    
+    
+    'LITE_white_fs30x20': 27,
+    'LITE_white_fs40x30': 33,
+    'LITE_white_fs60x40': 45,
+    
+    'LITE_white_fs20x30': 27,
+    'LITE_white_fs30x40': 33,
+    'LITE_white_fs40x60': 45,
+    
+    'LITE_white_fs30x30': 31,
+    'LITE_white_fs40x40': 43,
+    'LITE_white_fs50x50': 53,
+    
+    
+    
+    
+    'PREMIUM_silver_fs40x30': 63,
+    'PREMIUM_silver_fs60x40': 92,
+    'PREMIUM_silver_fs80x60': 137,
+    'PREMIUM_silver_fs90x60': 147,
+    
+    'PREMIUM_silver_fs30x40': 63,
+    'PREMIUM_silver_fs40x60': 92,
+    'PREMIUM_silver_fs60x80': 137,
+    'PREMIUM_silver_fs60x90': 147,
+    
+    'PREMIUM_silver_fs50x50': 92,
+    'PREMIUM_silver_fs60x60': 114,
+    'PREMIUM_silver_fs80x80': 157,
+    
+    
+    
+    
+    'PREMIUM_black_silver_fs40x30': 67,
+    'PREMIUM_black_silver_fs60x40': 98,
+    'PREMIUM_black_silver_fs80x60': 141,
+    'PREMIUM_black_silver_fs90x60': 155,
+    
+    'PREMIUM_black_silver_fs30x40': 67,
+    'PREMIUM_black_silver_fs40x60': 98,
+    'PREMIUM_black_silver_fs60x80': 141,
+    'PREMIUM_black_silver_fs60x90': 155,
+    
+    'PREMIUM_black_silver_fs50x50': 98,
+    'PREMIUM_black_silver_fs60x60': 121,
+    'PREMIUM_black_silver_fs80x80': 163,
+    
+    
+    
+    'PREMIUM_golden_fs40x30': 67,
+    'PREMIUM_golden_fs60x40': 98,
+    'PREMIUM_golden_fs80x60': 141,
+    'PREMIUM_golden_fs90x60': 155,
+    
+    'PREMIUM_golden_fs30x40': 67,
+    'PREMIUM_golden_fs40x60': 98,
+    'PREMIUM_golden_fs60x80': 137,
+    'PREMIUM_golden_fs60x90': 147,
+    
+    'PREMIUM_golden_fs50x50': 98,
+    'PREMIUM_golden_fs60x60': 121,
+    'PREMIUM_golden_fs80x80': 163,
+    
+    
+    
+    'PREMIUM_golden_green_fs40x30': 67,
+    'PREMIUM_golden_green_fs60x40': 98,
+    'PREMIUM_golden_green_fs80x60': 141,
+    'PREMIUM_golden_green_fs90x60': 155,
+    
+    'PREMIUM_golden_green_fs30x40': 67,
+    'PREMIUM_golden_green_fs40x60': 98,
+    'PREMIUM_golden_green_fs60x80': 137,
+    'PREMIUM_golden_green_fs60x90': 147,
+    
+    'PREMIUM_golden_green_fs50x50': 98,
+    'PREMIUM_golden_green_fs60x60': 121,
+    'PREMIUM_golden_green_fs80x80': 163
+    
+    
+};
+
+
+
+
+
+var Frame_IMG_Width = {
+    
+    
+    'Keilrahmen_fs30x20': 40,
+    'Keilrahmen_fs40x30': 40,
+    'Keilrahmen_fs50x30': 40,
+    'Keilrahmen_fs60x40': 40,
+    'Keilrahmen_fs80x60': 40,
+    'Keilrahmen_fs90x60': 40,
+    'Keilrahmen_fs100x50': 40,
+    'Keilrahmen_fs120x40': 40,
+    'Keilrahmen_fs120x80': 40,
+    
+    'Keilrahmen_fs20x30': 40,
+    'Keilrahmen_fs30x40': 40,
+    'Keilrahmen_fs30x50': 40,
+    'Keilrahmen_fs40x60': 40,
+    'Keilrahmen_fs60x80': 40,
+    'Keilrahmen_fs60x90': 40,
+    'Keilrahmen_fs50x100': 40,
+    'Keilrahmen_fs40x120': 40,
+    'Keilrahmen_fs80x120': 40,
+    
+    'Keilrahmen_fs30x30': 40,
+    'Keilrahmen_fs40x40': 40,
+    'Keilrahmen_fs50x50': 40,
+    'Keilrahmen_fs60x60': 40,
+    'Keilrahmen_fs80x80': 40,
+    
+    
+    
+    'LITE_black_fs30x20': 40,
+    'LITE_black_fs40x30': 30,
+    'LITE_black_fs60x40': 20,
+    'LITE_black_fs20x30': 30,
+    'LITE_black_fs30x40': 20,
+    'LITE_black_fs40x60': 15,
+    'LITE_black_fs30x30': 30,
+    'LITE_black_fs40x40': 20,
+    'LITE_black_fs50x50': 17,
+    
+    'LITE_white_fs30x20': 30,
+    'LITE_white_fs40x30': 30,
+    'LITE_white_fs60x40': 30,
+    'LITE_white_fs20x30': 30,
+    'LITE_white_fs30x40': 30,
+    'LITE_white_fs40x60': 30,
+    'LITE_white_fs30x30': 30,
+    'LITE_white_fs40x40': 30,
+    'LITE_white_fs50x50': 30,
+    
+    
+    'PREMIUM_silver_fs40x30': 80,
+    'PREMIUM_silver_fs60x40': 30,
+    'PREMIUM_silver_fs80x60': 30,
+    'PREMIUM_silver_fs90x60': 30,
+    'PREMIUM_silver_fs30x40': 55,
+    'PREMIUM_silver_fs40x60': 30,
+    'PREMIUM_silver_fs60x80': 30,
+    'PREMIUM_silver_fs60x90': 30,
+    'PREMIUM_silver_fs50x50': 30,
+    'PREMIUM_silver_fs60x60': 30,
+    'PREMIUM_silver_fs80x80': 30,
+    
+    
+    'PREMIUM_black_silver_fs40x30': 30,
+    'PREMIUM_black_silver_fs60x40': 30,
+    'PREMIUM_black_silver_fs80x60': 30,
+    'PREMIUM_black_silver_fs90x60': 30,
+    'PREMIUM_black_silver_fs30x40': 30,
+    'PREMIUM_black_silver_fs40x60': 30,
+    'PREMIUM_black_silver_fs60x80': 30,
+    'PREMIUM_black_silver_fs60x90': 30,
+    'PREMIUM_black_silver_fs50x50': 30,
+    'PREMIUM_black_silver_fs60x60': 30,
+    'PREMIUM_black_silver_fs80x80': 30,
+    
+    
+    'PREMIUM_golden_fs40x30': 30,
+    'PREMIUM_golden_fs60x40': 30,
+    'PREMIUM_golden_fs80x60': 30,
+    'PREMIUM_golden_fs90x60': 30,
+    'PREMIUM_golden_fs30x40': 30,
+    'PREMIUM_golden_fs40x60': 30,
+    'PREMIUM_golden_fs60x80': 30,
+    'PREMIUM_golden_fs60x90': 30,
+    'PREMIUM_golden_fs50x50': 30,
+    'PREMIUM_golden_fs60x60': 30,
+    'PREMIUM_golden_fs80x80': 30,
+    
+    'PREMIUM_golden_green_fs40x30': 30,
+    'PREMIUM_golden_green_fs60x40': 30,
+    'PREMIUM_golden_green_fs80x60': 30,
+    'PREMIUM_golden_green_fs90x60': 30,
+    'PREMIUM_golden_green_fs30x40': 30,
+    'PREMIUM_golden_green_fs40x60': 30,
+    'PREMIUM_golden_green_fs60x80': 30,
+    'PREMIUM_golden_green_fs60x90': 30,
+    'PREMIUM_golden_green_fs50x50': 30,
+    'PREMIUM_golden_green_fs60x60': 30,
+    'PREMIUM_golden_green_fs80x80': 30
+    
+    
+};
+
+
+
+var Frame_IMG_Height = {
+    
+    'Keilrahmen_fs30x20': 40,
+    'Keilrahmen_fs40x30': 40,
+    'Keilrahmen_fs50x30': 40,
+    'Keilrahmen_fs60x40': 40,
+    'Keilrahmen_fs80x60': 40,
+    'Keilrahmen_fs90x60': 40,
+    'Keilrahmen_fs100x50': 40,
+    'Keilrahmen_fs120x40': 40,
+    'Keilrahmen_fs120x80': 40,
+    
+    'Keilrahmen_fs20x30': 40,
+    'Keilrahmen_fs30x40': 40,
+    'Keilrahmen_fs30x50': 40,
+    'Keilrahmen_fs40x60': 40,
+    'Keilrahmen_fs60x80': 40,
+    'Keilrahmen_fs60x90': 40,
+    'Keilrahmen_fs50x100': 40,
+    'Keilrahmen_fs40x120': 40,
+    'Keilrahmen_fs80x120': 40,
+    
+    'Keilrahmen_fs30x30': 40,
+    'Keilrahmen_fs40x40': 40,
+    'Keilrahmen_fs50x50': 40,
+    'Keilrahmen_fs60x60': 40,
+    'Keilrahmen_fs80x80': 40,
+    
+    
+    'LITE_black_fs30x20': 40,
+    'LITE_black_fs40x30': 30,
+    'LITE_black_fs60x40': 20,
+    'LITE_black_fs20x30': 30,
+    'LITE_black_fs30x40': 20,
+    'LITE_black_fs40x60': 15,
+    'LITE_black_fs30x30': 30,
+    'LITE_black_fs40x40': 20,
+    'LITE_black_fs50x50': 17,
+    
+    'LITE_white_fs30x20': 30,
+    'LITE_white_fs40x30': 30,
+    'LITE_white_fs60x40': 30,
+    'LITE_white_fs20x30': 30,
+    'LITE_white_fs30x40': 30,
+    'LITE_white_fs40x60': 30,
+    'LITE_white_fs30x30': 30,
+    'LITE_white_fs40x40': 30,
+    'LITE_white_fs50x50': 30,
+    
+    
+    'PREMIUM_silver_fs40x30': 80,
+    'PREMIUM_silver_fs60x40': 30,
+    'PREMIUM_silver_fs80x60': 30,
+    'PREMIUM_silver_fs90x60': 30,
+    'PREMIUM_silver_fs30x40': 55,
+    'PREMIUM_silver_fs40x60': 30,
+    'PREMIUM_silver_fs60x80': 30,
+    'PREMIUM_silver_fs60x90': 30,
+    'PREMIUM_silver_fs50x50': 30,
+    'PREMIUM_silver_fs60x60': 30,
+    'PREMIUM_silver_fs80x80': 30,
+    
+    
+    'PREMIUM_black_silver_fs40x30': 30,
+    'PREMIUM_black_silver_fs60x40': 30,
+    'PREMIUM_black_silver_fs80x60': 30,
+    'PREMIUM_black_silver_fs90x60': 30,
+    'PREMIUM_black_silver_fs30x40': 30,
+    'PREMIUM_black_silver_fs40x60': 30,
+    'PREMIUM_black_silver_fs60x80': 30,
+    'PREMIUM_black_silver_fs60x90': 30,
+    'PREMIUM_black_silver_fs50x50': 30,
+    'PREMIUM_black_silver_fs60x60': 30,
+    'PREMIUM_black_silver_fs80x80': 30,
+    
+    
+    'PREMIUM_golden_fs40x30': 30,
+    'PREMIUM_golden_fs60x40': 30,
+    'PREMIUM_golden_fs80x60': 30,
+    'PREMIUM_golden_fs90x60': 30,
+    'PREMIUM_golden_fs30x40': 30,
+    'PREMIUM_golden_fs40x60': 30,
+    'PREMIUM_golden_fs60x80': 30,
+    'PREMIUM_golden_fs60x90': 30,
+    'PREMIUM_golden_fs50x50': 30,
+    'PREMIUM_golden_fs60x60': 30,
+    'PREMIUM_golden_fs80x80': 30,
+    
+    'PREMIUM_golden_green_fs40x30': 30,
+    'PREMIUM_golden_green_fs60x40': 30,
+    'PREMIUM_golden_green_fs80x60': 30,
+    'PREMIUM_golden_green_fs90x60': 30,
+    'PREMIUM_golden_green_fs30x40': 30,
+    'PREMIUM_golden_green_fs40x60': 30,
+    'PREMIUM_golden_green_fs60x80': 30,
+    'PREMIUM_golden_green_fs60x90': 30,
+    'PREMIUM_golden_green_fs50x50': 30,
+    'PREMIUM_golden_green_fs60x60': 30,
+    'PREMIUM_golden_green_fs80x80': 30
+    
+    
+};
+
+
+
+
+
+
+$('.frame_type').click(function() {
+    var frame_type = this.id;
+    $("#selected_frame_type").val(frame_type);
+    
+    $("#selected_frame_size").val('fs30x20');
+    
+    $(".frame_type").removeClass("active");
+    $("#"+frame_type).addClass("active");
+
+    
+    
+        $("#fs30x20").show();
+        $("#fs20x30").show();
+        $("#fs30x30").show();
+        $("#fs30x40").show();
+        $("#fs40x30").show();
+        $("#fs40x40").show();
+        $("#fs40x60").show();
+        $("#fs50x50").show();
+        $("#fs60x40").show();
+        $("#fs50x30").show();
+        $("#fs80x60").show();
+        $("#fs90x60").show();
+        $("#fs100x50").show();
+        $("#fs120x40").show();
+        $("#fs120x80").show();
+        $("#fs30x50").show();
+        $("#fs60x80").show();
+        $("#fs60x90").show();
+        $("#fs50x100").show();
+        $("#fs40x120").show();
+        $("#fs80x120").show();
+        $("#fs60x60").show();
+        $("#fs80x80").show();
+    
+    if(frame_type == 'Keilrahmen'){
+        
+        $("#fs30x20").show();
+        $("#fs20x30").show();
+        $("#fs30x30").show();
+        $("#fs30x40").show();
+        $("#fs40x30").show();
+        $("#fs40x40").show();
+        $("#fs40x60").show();
+        $("#fs50x50").show();
+        $("#fs60x40").show();
+        $("#fs50x30").show();
+        $("#fs80x60").show();
+        $("#fs90x60").show();
+        $("#fs100x50").show();
+        $("#fs120x40").show();
+        $("#fs120x80").show();
+        $("#fs30x50").show();
+        $("#fs60x80").show();
+        $("#fs60x90").show();
+        $("#fs50x100").show();
+        $("#fs40x120").show();
+        $("#fs80x120").show();
+        $("#fs60x60").show();
+        $("#fs80x80").show();
+        
+    }
+    else if(frame_type == 'LITE_black'){
+        /*
+        $("#fs30x20").hide();
+        $("#fs20x30").hide();
+        $("#fs30x30").hide();
+        $("#fs30x40").hide();
+        $("#fs40x30").hide();
+        $("#fs40x40").hide();
+        $("#fs40x60").hide();
+        $("#fs50x50").hide();
+        $("#fs60x40").hide();
+        */
+        
+        $("#fs50x30").hide();
+        $("#fs80x60").hide();
+        $("#fs90x60").hide();
+        $("#fs100x50").hide();
+        $("#fs120x40").hide();
+        $("#fs120x80").hide();
+        $("#fs30x50").hide();
+        $("#fs60x80").hide();
+        $("#fs60x90").hide();
+        $("#fs50x100").hide();
+        $("#fs40x120").hide();
+        $("#fs80x120").hide();
+        $("#fs60x60").hide();
+        $("#fs80x80").hide();
+
+    }else if(frame_type == 'LITE_white'){
+        /*
+        $("#fs30x20").hide();
+        $("#fs20x30").hide();
+        $("#fs30x30").hide();
+        $("#fs30x40").hide();
+        $("#fs40x30").hide();
+        $("#fs40x40").hide();
+        $("#fs40x60").hide();
+        $("#fs50x50").hide();
+        $("#fs60x40").hide();
+        */
+        
+        $("#fs50x30").hide();
+        $("#fs80x60").hide();
+        $("#fs90x60").hide();
+        $("#fs100x50").hide();
+        $("#fs120x40").hide();
+        $("#fs120x80").hide();
+        $("#fs30x50").hide();
+        $("#fs60x80").hide();
+        $("#fs60x90").hide();
+        $("#fs50x100").hide();
+        $("#fs40x120").hide();
+        $("#fs80x120").hide();
+        $("#fs60x60").hide();
+        $("#fs80x80").hide();
+        
+    }else if(frame_type == 'PREMIUM_black_silver'){
+        /*
+        $("#fs30x40").hide();
+        $("#fs40x30").hide();
+        $("#fs40x60").hide();
+        $("#fs50x50").hide();
+        $("#fs60x40").hide();
+        $("#fs60x60").hide();
+        $("#fs60x80").hide();
+        $("#fs60x90").hide();
+        $("#fs80x60").hide();
+        $("#fs80x80").hide();
+        $("#fs90x60").hide();
+        */
+        
+        
+        $("#fs30x20").hide();
+        $("#fs20x30").hide();
+        $("#fs30x30").hide();
+        $("#fs40x40").hide();
+        $("#fs50x30").hide();
+        $("#fs100x50").hide();
+        $("#fs120x40").hide();
+        $("#fs120x80").hide();
+        $("#fs30x50").hide();
+        $("#fs50x100").hide();
+        $("#fs40x120").hide();
+        $("#fs80x120").hide();
+        
+        
+    }else if(frame_type == 'PREMIUM_golden'){
+        /*
+        $("#fs30x40").hide();
+        $("#fs40x30").hide();
+        $("#fs40x60").hide();
+        $("#fs50x50").hide();
+        $("#fs60x40").hide();
+        $("#fs60x60").hide();
+        $("#fs60x80").hide();
+        $("#fs60x90").hide();
+        $("#fs80x60").hide();
+        $("#fs80x80").hide();
+        $("#fs90x60").hide();
+        */
+        
+        
+        $("#fs30x20").hide();
+        $("#fs20x30").hide();
+        $("#fs30x30").hide();
+        $("#fs40x40").hide();
+        $("#fs50x30").hide();
+        $("#fs100x50").hide();
+        $("#fs120x40").hide();
+        $("#fs120x80").hide();
+        $("#fs30x50").hide();
+        $("#fs50x100").hide();
+        $("#fs40x120").hide();
+        $("#fs80x120").hide();
+        
+        
+    }else if(frame_type == 'PREMIUM_golden_green'){
+        /*
+        $("#fs30x40").hide();
+        $("#fs40x30").hide();
+        $("#fs40x60").hide();
+        $("#fs50x50").hide();
+        $("#fs60x40").hide();
+        $("#fs60x60").hide();
+        $("#fs60x80").hide();
+        $("#fs60x90").hide();
+        $("#fs80x60").hide();
+        $("#fs80x80").hide();
+        $("#fs90x60").hide();
+        */
+        
+        
+        $("#fs30x20").hide();
+        $("#fs20x30").hide();
+        $("#fs30x30").hide();
+        $("#fs40x40").hide();
+        $("#fs50x30").hide();
+        $("#fs100x50").hide();
+        $("#fs120x40").hide();
+        $("#fs120x80").hide();
+        $("#fs30x50").hide();
+        $("#fs50x100").hide();
+        $("#fs40x120").hide();
+        $("#fs80x120").hide();
+        
+        
+    }else if(frame_type == 'PREMIUM_silver'){
+        /*
+        $("#fs30x40").hide();
+        $("#fs40x30").hide();
+        $("#fs40x60").hide();
+        $("#fs50x50").hide();
+        $("#fs60x40").hide();
+        $("#fs60x60").hide();
+        $("#fs60x80").hide();
+        $("#fs60x90").hide();
+        $("#fs80x60").hide();
+        $("#fs80x80").hide();
+        $("#fs90x60").hide();
+        */
+        
+        
+        $("#fs30x20").hide();
+        $("#fs20x30").hide();
+        $("#fs30x30").hide();
+        $("#fs40x40").hide();
+        $("#fs50x30").hide();
+        $("#fs100x50").hide();
+        $("#fs120x40").hide();
+        $("#fs120x80").hide();
+        $("#fs30x50").hide();
+        $("#fs50x100").hide();
+        $("#fs40x120").hide();
+        $("#fs80x120").hide();
+        
+        
+    }
+    
+    
+    
+    $("#fs40x30").click();
+    
+});
+
+
+
+$('.frame_size').click(function() {
+    
+    var selectID = this.id;
+    var frame_type = $("#selected_frame_type").val();
+    $("#selected_frame_size").val(selectID);
+    var lackID = $("#Lack").val();
+    var leinwandgewebeID = $("#Leinwandgewebe").val();
+    
+    ProductProcess(selectID,frame_type,leinwandgewebeID,'',lackID);
+
+});
+
+
+
+$('.leinwandgewebe').click(function() {
+    
+    
+    var frame_type = $("#selected_frame_type").val();
+    var frame_size = $("#selected_frame_size").val();
+    var lackID = $("#Lack").val();
+    
+    var leinwandgewebeID = this.id;
+    $("#Leinwandgewebe").val(leinwandgewebeID);
+    
+    //var frame_type = $("#selected_frame_type").val();
+    $(".leinwandgewebe").removeClass("active");
+    $("#"+leinwandgewebeID).addClass("active");
+    
+    
+    ProductProcess(frame_size,frame_type,leinwandgewebeID,'',lackID);
+
+});
+
+
+
+$('.lack').click(function() {
+    
+    
+    var frame_type = $("#selected_frame_type").val();
+    var frame_size = $("#selected_frame_size").val();
+    var leinwandgewebeID = $("#Leinwandgewebe").val();
+    
+    var lackID = this.id;
+    $("#Lack").val(lackID);
+    
+    //var frame_type = $("#selected_frame_type").val();
+    $(".lack").removeClass("active");
+    $("#"+lackID).addClass("active");
+    
+    
+    ProductProcess(frame_size,frame_type,leinwandgewebeID,'',lackID);
+
+});
+
+
+
+
+
+
+
+
+var original_height = 30;
+var original_width = 20;
+
+
+var viewport_height = 300;
+var viewport_width = (original_width / original_height) * viewport_height;
+
+var frame_width = viewport_width + 40;
+var frame_height = viewport_height + 40;
+
+var set_boundary_width = frame_width;
+var set_boundary_height = frame_height;
+
+var set_width = viewport_width;
+var set_height = viewport_height;
+
+$(".cr-viewport").css("box-shadow", "0 0 2000px 2000px rgb(0 0 0 / 42%)");
+
+$(".lds-facebook").removeClass("display_inline");
+$(".lds-facebook").addClass("display_none");
+
+$image_crop = $('#image_demo').croppie({
+    viewMode: 3,
+    enableExif: true,
+    viewport: {
+      width:set_width,
+      height:set_height,
+      type:'square' //circle
+    },
+    boundary:{
+      width:set_boundary_width,
+      height:set_boundary_height
+    }
+  });
+
+  $('#upload_image').on('change', function(){
+    var reader = new FileReader();
+    reader.onload = function (event) {
+      $image_crop.croppie('bind', {
+        url: event.target.result
+      }).then(function(){
+        console.log('jQuery bind complete');
+      });
+    }
+    reader.readAsDataURL(this.files[0]);
+    $('#uploadimageModal').modal('show');
+  });
+
+  $('.crop_image').click(function(event){
+    $image_crop.croppie('result', {
+      size: "original",
+      type: 'canvas',
+      format: "png", 
+      quality: 1
+    }).then(function(response){
+      $.ajax({
+        url:"upload.php",
+        type: "POST",
+        data:{"image": response},
+        beforeSend: function(data) {
+            
+            $(".lds-facebook").removeClass("display_none");
+            $(".lds-facebook").addClass("display_inline");
+          
+            
+        },
+        success:function(data)
+        {
+          $('#uploadimageModal').modal('hide');
+          $('#uploaded_image').html(data);
+          
+          $(".lds-facebook").removeClass("display_inline");
+          $(".lds-facebook").addClass("display_none");
+            
+        }
+      });
+    })
+  });
+
+
+
+});  
+
+
+
+$(".apply-frame").click(function(){
+    
+    $(".photo-frame-img").css("z-index", '2');    
+});
+
+
+
+$(".remove-frame").click(function(){
+    
+    $(".photo-frame-img").css("z-index", '0');    
+});
+
+
+</script>
+
+
+
+
+
+
+
