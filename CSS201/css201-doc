@@ -100,4 +100,11 @@ how to make a backgroud dark
     linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%)
     add this to backgroud image
 
+Tansformation:
+    transform: is used
+    inside which we use translate 
+    translate(x,y)
+    rotate(deg)
+
+
 
