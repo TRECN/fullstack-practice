@@ -5,15 +5,15 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-body{
+html,body{
     display: grid;
     height: 100%;
     place-items: center;
     text-align: center;
 }
 .container{
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 430px;
     position: relative;
 }
 .container .box{
@@ -36,6 +36,7 @@ body{
     background-position: center;
     background-size: cover;
     top: 0;
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -51,7 +52,7 @@ body{
 .container #custom-btn{
     margin-top: 30px;
     display: block;
-    width: 100%;
+    width: 50%;
     height: 50px;
     border: none;
     outline: none;
