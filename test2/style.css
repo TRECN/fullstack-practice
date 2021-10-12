@@ -18,13 +18,15 @@ html,body{
     width: 1000px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
 }
 .container .box{
     position: relative;
+    top: 0;
+    right: 0;
     height: 300px;
-    width: 70%;
+    width: 300px;
     border-radius: 10px;
     background: #fff;
     border: 2px dashed #c2cdda;
@@ -41,12 +43,13 @@ html,body{
     background-position: center;
     background-size: cover;
     top: 0;
+    right: 0;
 
     height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    
 }
 .box img{
     height: 100%;
@@ -54,6 +57,9 @@ html,body{
     object-fit: cover;
 }
 .btn{
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
 }
