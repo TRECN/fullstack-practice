@@ -20,15 +20,15 @@
             </div>
             
          </div>
-         <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+         <button onclick="btnActive()" id="custom-btn">Choose a file</button>
          <input id="default-btn" type="file" hidden>
       </div>
       <script>
-         const wrapper = document.querySelector(".box");
+         const box = document.querySelector(".box");
          const defaultBtn = document.querySelector("#default-btn");
          const img = document.querySelector("img");
          let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
-         function defaultBtnActive(){
+         function btnActive(){
            defaultBtn.click();
          }
          defaultBtn.addEventListener("change", function(){
@@ -38,7 +38,7 @@
              reader.onload = function(){
                const result = reader.result;
                img.src = result;
-               wrapper.classList.add("active");
+               box.classList.add("active");
              }
              
              reader.readAsDataURL(file);
