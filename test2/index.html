@@ -9,6 +9,12 @@
 </head>
 <body>
     <div class="container">
+        <div class="btn">
+            <button onclick="btnActive()" id="upload-btn">Choose a file</button>
+            <input type="file" id="default-btn" hidden>
+            <button onclick="btnActiveDownload()" id="download-btn">download img</button>
+            <a href="" id="imgD" download="image.jpg" hidden></a>
+        </div>
         <div class="box">
             <div id="image">
             </div>
@@ -18,8 +24,8 @@
                 </div>
             </div>
         </div>
-        <button onclick="btnActive()" id="custom-btn">Choose a file</button>
-        <input type="file" id="default-btn" hidden>
+        
+       
     </div>
 
     <script src="/test2/script.js"></script>
