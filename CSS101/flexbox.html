@@ -15,31 +15,42 @@
             flex-wrap: wrap;
         }
         #container div{
-            border: 3px solid red;
-            flex-basis: 50%;
-            flex-shrink: 0;
-            flex-grow: 0;
+            /* border: 3px solid red; */
         }
-        #container div.right{
-            flex-basis: 75%;
+        .navigation{
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        .content{
+            flex-basis: 60%;
+            flex-grow: 1;
+            flex-shrink: 0;
+
+        }
+        .header{
+            flex-basis: 100%;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-bottom: 2px solid black;
         }
     </style>
 </head>
 <body>
     
     <div id="container">
-        <div>left
+        <div class="header">
+            Header
         </div>
-        <div>center</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
-        <div >Right</div>
+        <div class="navigation">Navigation</div>
+        <div class="content">
+            <h1>Hello</h1>
+            <p>Lorem ips
+                um, dolor sit amet consectetur adipisicing elit. Necessitatibus totam ipsum dolores, molestiae cupiditate alias soluta non voluptates nulla voluptas illo libero quod voluptatem repudiandae, sunt nisi veniam reprehenderit eveniet?</p>
+                <h1>
+                </h1>
+                <p>lorem</p>
+        </div>
     </div>
 
 </body>
