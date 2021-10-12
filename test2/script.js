@@ -1,19 +1,20 @@
-const boxes = document.querySelector(".box");
+const box = document.querySelector(".box");
 const defaultBtn = document.querySelector("#default-btn");
-const img = document.querySelector("img");
+const img = document.getElementById("#image").style.background;
+         
 function btnActive(){
     defaultBtn.click();
 }
-defaultBtn.addEventListener("change",function(){
-    const file = this.file[0];
+defaultBtn.addEventListener("change", function(){
+    const file = this.files[0];
     if(file){
         const reader = new FileReader();
         reader.onload = function(){
             const result = reader.result;
-               img.src = result;
-               boxes.classList.add("active");
+               img='url('+result+')';
+               box.classList.add("active");
         }
-        reader.readAsDataURL(file)
+        reader.readAsDataURL(file);
     }
     
 
