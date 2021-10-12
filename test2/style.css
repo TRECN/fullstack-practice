@@ -31,8 +31,11 @@ body{
 .box.active{
     border: none;
 }
-.box .image{
+.box #image{
     position: absolute;
+    background-position: center;
+    background-size: cover;
+    top: 0;
     height: 100%;
     width: 100%;
     display: flex;
