@@ -107,5 +107,16 @@ Tansformation:
     rotate(deg)
     scale()
 
+animation:
+    the element position must be Absolute
+    define the position
+    add the
+    we use @keyframes name{
+    from{
+    }
+    to{
+    }
+    }    
+
 
 
