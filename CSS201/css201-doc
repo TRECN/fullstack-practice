@@ -118,5 +118,9 @@ animation:
     }
     }    
 
+flexbox:
+    set display flex
+    flex-basis sets the size of the flex box
+
 
 
