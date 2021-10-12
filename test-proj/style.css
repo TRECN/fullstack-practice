@@ -1,14 +1,20 @@
 body{
     background-color: #f4f4f4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    position: relative;
 }
 .container{
+    position: absolute;
     border: 5px solid red;
-    display: flex;
-    width: 100px;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-image: url(/test-proj/spacex-OHOU-5UVIYQ-unsplash.2e16d0ba.fill-786x552.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
