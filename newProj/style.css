@@ -44,8 +44,9 @@
     z-index: -1;
 }
 .img{
+    position: relative;
     width: 200px;
-    height: 200px;
+    max-height: 200px;
     overflow: hidden;
 }
 .preview:hover{
