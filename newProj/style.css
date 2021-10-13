@@ -30,6 +30,8 @@
     width: 100%;
     margin: 20px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .left .preview{
     border: 3px solid red;
