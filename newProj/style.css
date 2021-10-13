@@ -35,9 +35,12 @@
     flex-direction: column;
 }
 .left .preview{
-    border: 3px solid red;
+    border: 20px solid rgba(54, 49, 49,0.5);
     width: 200px;
     height: 200px;
+    background-image: url(/CSS101/cssimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 img{
     width: 100%;
