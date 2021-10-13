@@ -29,11 +29,12 @@
 .left, .right{
     width: 100%;
     margin: 20px;
+    display: flex;
 }
 .left .preview{
     border: 3px solid red;
-    width: 100%;
-    height: 20vh;
+    width: 200px;
+    height: 200px;
 }
 img{
     width: 100%;
