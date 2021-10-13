@@ -45,3 +45,6 @@ img{
     object-fit: cover;
     cursor: move;
 }
+.range{
+    width: 300px;
+}
