@@ -5,12 +5,20 @@
 }
 .main{
     border: 5px solid red;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .header{
     border: 5px solid green;
     padding: 20px;
-    grid-column-start: 2;
     text-align: center;    
+    
+}
+.container{
+    border: 5px solid blue;
+    width: 1000px;
+    height: 100vh;
+    padding: 50px;
 }
