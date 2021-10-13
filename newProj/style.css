@@ -30,3 +30,14 @@
     width: 100%;
     margin: 20px;
 }
+.left .preview{
+    border: 3px solid red;
+    width: 100%;
+    height: 20vh;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: move;
+}
