@@ -1,0 +1,6 @@
+media queries
+    this can be used to make website responsive
+syntax
+@media (max or min width){
+
+}
