@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            box-sizing: border-box;
+        }
         #layout{
             display: flex;
             flex-wrap: wrap;
@@ -14,7 +17,14 @@
             flex-basis: 100%;
             border-bottom: 1px solid black;
         }
-        #
+        #sidebar{
+            flex-basis: 20%;
+            border-right: 1px solid #aaa;
+        }
+        #content{
+            flex-basis: 80%;
+            border: 1px solid red;
+        }
     </style>
 </head>
 <body>
