@@ -4,3 +4,8 @@ syntax
 @media (max or min width){
 
 }
+
+mobile first 
+    it means we make website for mobile then add media queries to fit other device
+
+    for this we use min-width in media queries
