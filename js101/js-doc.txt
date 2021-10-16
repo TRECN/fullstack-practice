@@ -2,8 +2,9 @@ javaScript
     javascript is used for interactivity
 
 internal javascript
-    it is written in the  html and inside the script tag
+    it is written in the  HTML and inside the script tag
     in the body 
 
 external javaScript
-    we us a .js file and acess it as src in the script tag
+    we use a .js file and access it as src in the script tag
+    we put script tag just above the body closing tag
