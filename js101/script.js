@@ -11,3 +11,8 @@
 //variable html-----
 var website="https://google.com"
 var name="Rishabh raj Tarun"
+
+console.log(name)
+console.log(name)
+console.log(name)
+console.log(name)
