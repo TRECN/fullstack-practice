@@ -2,3 +2,5 @@ javaScript
     javascript is used for interactivity
 
 internal javascript
+    it is written in the  html and inside the script tag
+    in the body 
