@@ -1,6 +1,6 @@
-var name="rishabh";
-if(name==="rishabh"){
-    alert(name);
+var name="ri"
+if(name=="ri"){
+    alert(100+100);
 }
 
 function greeting(name){
