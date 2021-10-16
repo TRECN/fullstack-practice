@@ -1,9 +1,11 @@
-var name="ri"
-if(name=="ri"){
-    alert(100+100);
-}
+// var name="ri"
+// if(name=="ri"){
+//     alert(100+100);
+// }
 
-function greeting(name){
-    return `hello ${name}, welcome to javaScript`;
-}
-const greet = greeting("Rishabh")
+// function greeting(name){
+//     return `hello ${name}, welcome to javaScript`;
+// }
+// const greet = greeting("Rishabh")
+
+//variable html-----
