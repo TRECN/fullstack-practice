@@ -11,3 +11,4 @@ external javaScript
 
 variable
     var is used to make variable
+    we can store a number or a string 
