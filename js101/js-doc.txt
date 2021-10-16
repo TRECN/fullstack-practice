@@ -8,3 +8,6 @@ internal javascript
 external javaScript
     we use a .js file and access it as src in the script tag
     we put script tag just above the body closing tag
+
+variable
+    var is used to make variable
