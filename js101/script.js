@@ -10,10 +10,12 @@
 
 //variable html-----
 var website="https://google.com"
-var name="Rishabh raj Tarun"
+var name="rishabh"
 
 
 console.log(website)
-
-let apple=1;
+if(name=="rishabh"){
+    let apple=1;
 const height="6'.0\""
+}
+console.log(apple)
