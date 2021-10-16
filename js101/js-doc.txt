@@ -4,3 +4,6 @@ javaScript
 internal javascript
     it is written in the  html and inside the script tag
     in the body 
+
+external javaScript
+    we us a .js file and acess it as src in the script tag
