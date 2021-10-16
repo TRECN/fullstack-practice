@@ -1,1 +1,4 @@
-console.log("hello rishabh")
+var name="rishabh";
+if(name=="rishabh"){
+    alert(name);
+}
