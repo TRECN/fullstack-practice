@@ -9,3 +9,5 @@
 // const greet = greeting("Rishabh")
 
 //variable html-----
+var website="https://google.com"
+var name="Rishabh raj Tarun"
