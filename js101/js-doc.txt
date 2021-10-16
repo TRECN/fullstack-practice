@@ -1,2 +1,4 @@
 javaScript
     javascript is used for interactivity
+
+internal javascript
