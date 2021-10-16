@@ -4,5 +4,6 @@ if(name==="rishabh"){
 }
 
 function greeting(name){
-    return `hellow ${name}, welcome to javaScript`;
+    return `hello ${name}, welcome to javaScript`;
 }
+const greet = greeting("Rishabh")
