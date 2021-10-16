@@ -12,9 +12,8 @@
 var website="https://google.com"
 var name="Rishabh raj Tarun"
 
-console.log(name)
-console.log(name)
-console.log(name)
+
 console.log(website)
-console.log(website)
-console.log(website)
+
+let apple=1;
+const height="6'.0\""
