@@ -4,5 +4,5 @@ if(name==="rishabh"){
 }
 
 function greeting(name){
-    return `hellow ${name}, welcome to javaScript`
+    return `hellow ${name}, welcome to javaScript`;
 }
