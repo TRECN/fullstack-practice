@@ -16,4 +16,4 @@ variable
     let and const has only scope to the {}
     const variable is used to create constants
 
-comments are created by adding //
+comments are created by adding // or /**/
