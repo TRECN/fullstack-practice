@@ -13,3 +13,5 @@ variable
     var is used to make variable
     we can store a number or a string 
     let and const are performance based variables
+    let and const has only scope to the {}
+    const variable is used to create constants
