@@ -8,4 +8,6 @@
 // }
 
 const a="RIshabh";
-if(a=="rishabh")
+if(a=="rishabh"){
+    console.log("rishabh")
+}
