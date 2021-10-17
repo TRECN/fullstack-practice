@@ -23,5 +23,5 @@ if(age>=21){
     console.log("can drink")
 }
 else{
-    console.log("")
+    console.log("not old enough to drink alcoholz")
 }
