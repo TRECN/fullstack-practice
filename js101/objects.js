@@ -1,5 +1,6 @@
 let person={}
 person={
     'name':'Rishabh',
-    'job':'student'
+    'job':'student',
+    'age':'18'
 }
