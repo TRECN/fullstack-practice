@@ -20,5 +20,5 @@ if(age>=18){
     console.log("allowed to vote");
 }
 if(age>=21){
-    console.log("")
+    console.log("can drink")
 }
