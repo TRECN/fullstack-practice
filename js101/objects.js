@@ -4,3 +4,4 @@ person={
     'job':'student',
     'age':'18'
 }
+person['name']
