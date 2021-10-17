@@ -7,10 +7,10 @@
 //     console.log("raj")
 // }
 
-const a="RIshabh";
-if(a=="rishabh"){
-    console.log("rishabh");
-}
-else{
-    console.log("raj");
-}
+// const a="RIshabh";
+// if(a=="rishabh"){
+//     console.log("rishabh");
+// }
+// else{
+//     console.log("raj");
+// }
