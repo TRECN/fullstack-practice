@@ -9,5 +9,8 @@
 
 const a="RIshabh";
 if(a=="rishabh"){
-    console.log("rishabh")
+    console.log("rishabh");
+}
+else{
+    console.log("raj");
 }
