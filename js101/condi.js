@@ -22,3 +22,6 @@ if(age>=18){
 if(age>=21){
     console.log("can drink")
 }
+else{
+    console.log("")
+}
