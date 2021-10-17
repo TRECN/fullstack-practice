@@ -14,3 +14,11 @@
 // else{
 //     console.log("raj");
 // }
+
+const age="18"
+if(age>=18){
+    console.log("allowed to vote");
+}
+if(age>=21){
+    console.log("")
+}
