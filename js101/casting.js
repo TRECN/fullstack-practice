@@ -13,4 +13,4 @@ console.log(Boolean(100))
 
 age = 31;
 age=String(age)
-console.log()
+console.log(typeof(age))
