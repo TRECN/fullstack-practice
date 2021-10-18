@@ -18,4 +18,4 @@ console.log(typeof(age))
 name="rishabh";
 age=18;
 console.log("my name is "+name+ " "+age)
-console.log(`my name is ${name} my age is ${age}`)
+console.log(`my name is ${name} my age is ${age}`) //template literal
