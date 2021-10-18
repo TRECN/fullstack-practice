@@ -17,3 +17,4 @@ console.log(typeof(age))
 
 name="rishabh";
 age=18;
+console.log("my name is "+name+ " "+age)
