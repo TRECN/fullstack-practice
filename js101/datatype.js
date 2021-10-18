@@ -1,2 +1,2 @@
 const bool=true
-console.log()
+console.log(typeof(bool))
