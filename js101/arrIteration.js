@@ -1,1 +1,1 @@
-const js=23;
+const arr=["one", "two", "three"]
