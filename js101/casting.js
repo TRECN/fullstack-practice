@@ -12,3 +12,4 @@ console.log(Boolean(-100))
 console.log(Boolean(100))
 
 age = 31;
+age=String(age)
