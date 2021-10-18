@@ -9,3 +9,7 @@ console.log(items)
 items.forEach(node=>{
     node.innerText="This is changed";
 })
+
+items.forEach((i,index)=>{
+    i.innerText=`hello ${index}`
+})
