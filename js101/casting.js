@@ -3,5 +3,5 @@ console.log(typeof(age))
 var sum=age+2;
 
 console.log(sum);
-Number(age);
+age=Number(age);
 console.log(sum+age)
