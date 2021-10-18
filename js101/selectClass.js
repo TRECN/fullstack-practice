@@ -11,5 +11,9 @@ items.forEach(node=>{
 })
 
 items.forEach((i,index)=>{
-    i.innerText=`hello ${index}`
+    i.innerText=`hello ${index+1}`
+})
+
+items.forEach(node=>{
+    node.classList.add("class1","class2")
 })
