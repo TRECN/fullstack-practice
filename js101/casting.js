@@ -4,3 +4,4 @@ var sum=age+2;
 
 console.log(sum);
 Number(age);
+console.log(sum+age)
