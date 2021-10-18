@@ -2,6 +2,10 @@ const ele=document.querySelectorAll(".thisClass")
 console.log(ele)//this shows the node list 
 
 
-const item=document.querySelectorAll('li')
+const items=document.querySelectorAll('li')
 
-console.log(item)
+console.log(items)
+
+items.forEach(node=>{
+    node.innerText="This is changed";
+})
