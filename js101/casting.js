@@ -7,3 +7,4 @@ age=Number(age);
 console.log(7+age);
 console.log(typeof(age));
 console.log(Boolean(0))
+console.log(Boolean(-1))
