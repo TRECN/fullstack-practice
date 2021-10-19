@@ -9,12 +9,13 @@ console.log(typeof(addT))
 
 //...rest
 
-function sum(...numbers){
+function sum(name,...numbers){
     let total=0;
     for(i in numbers){
         total=total+numbers[i];
     }
-    return total
+    return `${name} : ${total}`//total
 }
 
-const Total=sum(1,2,3,4)
+const Total=sum("rishabh",2,3,4)
+console.log(Total)
