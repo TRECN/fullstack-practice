@@ -11,12 +11,13 @@ age.innerText=18;
 
 function showDogYears(age) {
   // Step 3. Cast `age` as a number
+  age=Number(age);
   dogYears.innerText = age * 7;
   return age * 7
 }
 
 // Step 4. Set the parameter of showDogyears()
-dogYears.innerText = showDogYears()
+dogYears.innerText = showDogYears(2)
 
 // Step 5. Select all the .fake-input classes and give them the class of .real-input. This may take a little "googling" to find the solution, but that's half of what web development is all about. 
 const fakeInputs = document.querySelectorAll(".fake-input")
