@@ -26,4 +26,5 @@ const person={
     'age':18,
     'height':"5'9\""
 }
+person['faveFood']="pizza"
 console.log(person['name'])
