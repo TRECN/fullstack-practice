@@ -17,10 +17,10 @@ function showDogYears(age) {
 }
 
 // Step 4. Set the parameter of showDogyears()
-dogYears.innerText = showDogYears(2)
+dogYears.innerText = showDogYears(age.innerText)
 
 // Step 5. Select all the .fake-input classes and give them the class of .real-input. This may take a little "googling" to find the solution, but that's half of what web development is all about. 
 const fakeInputs = document.querySelectorAll(".fake-input")
 fakeInputs.forEach(node => {
-  node.classList.add()
+  node.classList.add("real-input")
 })
