@@ -10,7 +10,7 @@ console.log(typeof(addT))
 //...rest
 
 function sum(...numbers){
-    let total=0
+    let total=0;
     for(i in numbers){
         total=total+numbers[i];
     }
