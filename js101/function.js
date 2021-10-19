@@ -28,12 +28,12 @@ const person={
     'speak':function(want='cookies'){
         console.log(`I want ${want}`)
     },
-    talk(){
-        console.log("i am talking")
+    talk(to){
+        console.log(`i am talking to ${to}`)
     }
 }
 person['faveFood']="pizza"
 console.log(person['name'])
 console.log(person.age)
 person.speak('milk')
-person.talk()
+person.talk("rishabh")
