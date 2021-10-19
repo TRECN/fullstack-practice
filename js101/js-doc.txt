@@ -17,3 +17,6 @@ variable
     const variable is used to create constants
 
 comments are created by adding // or /**/
+
+... is rest
+to accept infinite numbers of parameters
