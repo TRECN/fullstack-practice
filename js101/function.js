@@ -19,3 +19,5 @@ function sum(name,...numbers){
 
 const Total=sum("rishabh",2,3,4)
 console.log(Total)
+
+//object with function
