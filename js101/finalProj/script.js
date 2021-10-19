@@ -1,5 +1,5 @@
 // Step 1: Fill in these three consts by selecting the right nodes by their HTML ID's
-const name = document.getElementById(""); // Fill this in 
+const name = document.getElementById("name"); // Fill this in 
 const age = document.getElementById(""); // Fill this in.
 const dogYears = document.getElementById(""); // Fill this in. 
 
