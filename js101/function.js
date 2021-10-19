@@ -23,5 +23,6 @@ console.log(Total)
 //object with function
 const person={
     'name':'rishabh',
-    'age':18
+    'age':18,
+    'height':"5'9\""
 }
