@@ -16,3 +16,5 @@ function sum(...numbers){
     }
     return total
 }
+
+const Total=sum(1,2,3,4)
