@@ -25,6 +25,9 @@ const person={
     'name':'rishabh',
     'age':18,
     'height':"5'9\""
+    'speak':function(want){
+        console.log
+    }
 }
 person['faveFood']="pizza"
 console.log(person['name'])
