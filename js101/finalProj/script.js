@@ -1,12 +1,13 @@
 // Step 1: Fill in these three consts by selecting the right nodes by their HTML ID's
 const name = document.getElementById("name"); // Fill this in 
-const age = document.getElementById(""); // Fill this in.
-const dogYears = document.getElementById(""); // Fill this in. 
+const age = document.getElementById("age"); // Fill this in.
+const dogYears = document.getElementById("dogyears"); // Fill this in. 
 
 // Step 2. Set the values.
 // Example: myNode.innerText = "something"
 // Set `name` and `age` in here
-
+name.innerText="Rishabh"
+age.innerText=18;
 
 function showDogYears(age) {
   // Step 3. Cast `age` as a number
