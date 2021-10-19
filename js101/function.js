@@ -32,4 +32,4 @@ const person={
 person['faveFood']="pizza"
 console.log(person['name'])
 console.log(person.age)
-person.speak()
+person.speak('milk')
