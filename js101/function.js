@@ -27,9 +27,13 @@ const person={
     'height':"5'9\"",
     'speak':function(want='cookies'){
         console.log(`I want ${want}`)
+    },
+    talk(){
+        console.log("i am talking")
     }
 }
 person['faveFood']="pizza"
 console.log(person['name'])
 console.log(person.age)
 person.speak('milk')
+person.talk()
