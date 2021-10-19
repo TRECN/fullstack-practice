@@ -24,9 +24,9 @@ console.log(Total)
 const person={
     'name':'rishabh',
     'age':18,
-    'height':"5'9\""
-    'speak':function(want){
-        console.log
+    'height':"5'9\"",
+    'speak':function(want='cookies'){
+        console.log(`I want ${want}`)
     }
 }
 person['faveFood']="pizza"
