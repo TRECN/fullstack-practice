@@ -4,3 +4,4 @@ function greeting(){
     var person2="jon";
 }
 greeting();
+console.log(person2)
