@@ -1,2 +1,4 @@
 const num=1;
-if(num===)
+if(num===1){
+    const greeting ="hello"
+}
