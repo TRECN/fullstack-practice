@@ -4,3 +4,5 @@ if(num==4){
     console.log(true);
 }
 else console.log(false);
+
+//strict
