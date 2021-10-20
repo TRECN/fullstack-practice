@@ -6,3 +6,6 @@ if(num==4){
 else console.log(false);
 
 //strict comparision
+if(num===4){
+    
+}
