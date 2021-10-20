@@ -1,3 +1,4 @@
-function greeting(person22){
-    console.log(`hello${person22}`)
+let person11="RIshabh"
+function greeting(){
+    console.log(`hello${person11}`)
 }
