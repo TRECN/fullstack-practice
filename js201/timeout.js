@@ -6,7 +6,7 @@
 let count =0;
 
 
-setInterval(function(){
+const myInterval=setInterval(function(){
 
     console.log("Checking something...co")
     count++;
