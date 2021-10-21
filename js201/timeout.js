@@ -4,5 +4,5 @@
 // },3000)
 
 setInterval(function(){
-    
+    console.log("Checking something...")
 },2500)
