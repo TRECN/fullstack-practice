@@ -11,5 +11,7 @@ setInterval(function(){
     console.log("Checking something...co")
     count++;
 
-    
+    if(count===3){
+        clearInterval()
+    }
 },2500)
