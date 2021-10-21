@@ -13,6 +13,6 @@ const myInterval=setInterval(function(){
 
     if(count===3){
         clearInterval(myInterval)
-        console.log("that was the last one")
+        console.log("that last one")
     }
 },2500)
