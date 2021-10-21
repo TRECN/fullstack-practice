@@ -1,3 +1,4 @@
-//"use strict";
+"use strict";
 
-x="thing";
+let x="thing";
+z="some";
