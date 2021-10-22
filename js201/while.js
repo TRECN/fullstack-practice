@@ -6,3 +6,7 @@ while(n<=100){
     console.log(n)
     n++;
 }
+
+while(true){
+    let name=prompt("what is your name")
+}
