@@ -8,5 +8,6 @@ while(n<=100){
 }
 
 while(true){
-    let name=prompt("what is your name")
+    let name=prompt("what is your name");
+    
 }
