@@ -9,5 +9,8 @@ while(n<=100){
 
 while(true){
     let name=prompt("what is your name");
-    
+    if(name==="rishabh"){
+        break;
+    }
+    alert("wrong name")
 }
