@@ -2,7 +2,7 @@
 //     do something
 // }
 let n=0;
-while(n<10){
+while(n<1){
     console.log(n)
     n++;
 }
