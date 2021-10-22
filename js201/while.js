@@ -1,3 +1,3 @@
-while(something is true){
-    do something
-}
+// while(something is true){
+//     do something
+// }
