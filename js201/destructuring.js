@@ -5,5 +5,5 @@ console.log(months)
 
 const person3={
     "name":"rishabh",
-    
+    "class":"10"
 }
