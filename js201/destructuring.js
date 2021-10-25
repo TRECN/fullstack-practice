@@ -9,6 +9,8 @@ const person3={
     "class":"10",
     "roll":"47"
 }
-
+//normal
 const name=person3['name']
 const classes=person3['class']
+//destructuring
+const {name1,classe}=person3;
