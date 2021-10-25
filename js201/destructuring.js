@@ -10,4 +10,5 @@ const person3={
     "roll":"47"
 }
 
-const name=
+const name=person3['name']
+const classes=person3['class']
