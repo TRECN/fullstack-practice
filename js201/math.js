@@ -1,1 +1,1 @@
-console.log()
+console.log(Math.round(4.7))
