@@ -4,3 +4,4 @@ const person4={
 }
 
 delete person4['age']
+console.log(person4)
