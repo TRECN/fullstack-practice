@@ -1,5 +1,3 @@
-
-
 let randomno=Math.floor(Math.random()*10)
 while(true){
     let number=prompt("guess a number")
