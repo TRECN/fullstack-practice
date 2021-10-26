@@ -6,5 +6,4 @@ while(true){
         alert("you guessed a number")
         break;
     }
-
 }
