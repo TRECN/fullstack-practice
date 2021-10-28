@@ -23,7 +23,7 @@ const num=10;
 try{
     num+=10;
 }catch(error){
-    console.log("error is",error);
+    console.warn("error is",error);
 }finally{
     console.log(num)
 }
