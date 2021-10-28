@@ -1,6 +1,6 @@
 //JSON JavaScript Object Notation
 //to share data
-const objects={
+{
     'name':'Rishabh',
     'fav':['pizza','tacos','salmon'],
     'age':'18',
