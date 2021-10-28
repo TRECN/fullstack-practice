@@ -5,6 +5,10 @@ class MyClassName{
         this.name1=name1;
     }
     speak(){
+        if(this.name1===undefined){
+            this.name="Unnamed"
+        }
+
         console.log(`say my ${this.name1}`)
     }
 }
