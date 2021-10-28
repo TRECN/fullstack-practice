@@ -1,4 +1,4 @@
-
+//this function only function the particular object or funtion
 //without this keyword
 const person={
     'name':"person",
