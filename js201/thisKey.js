@@ -3,7 +3,7 @@
 const person={
     'name':"rishabh",
     speak(){
-        console.log(person121['name'])
+        console.log(person['name'])
     }
 }
 
@@ -16,3 +16,4 @@ const person1={
     }
 }
 person.speak()
+person1.speak()
