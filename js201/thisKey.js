@@ -1,10 +1,18 @@
 
-
-const person121={
+//without this keyword
+const person={
     'name':"rishabh",
     speak(){
         console.log(person121['name'])
     }
 }
 
-person121.speak("Rishabh")
+
+//with this keyword
+const person1={
+    'name':"rishabh",
+    speak(){
+        console.log(this.name)
+    }
+}
+person.speak()
