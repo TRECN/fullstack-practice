@@ -1,7 +1,9 @@
+
+
 const person121={
     'name':"rishabh",
-    speak(name){
-        console.log(name)
+    speak(){
+        console.log(person121['name'])
     }
 }
 
