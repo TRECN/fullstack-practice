@@ -6,7 +6,7 @@ class MyClassName{
     }
     speak(){
         if(this.name1===undefined){
-            this.name="Unnamed"
+            this.name1="Unnamed"
         }
 
         console.log(`say my ${this.name1}`)
