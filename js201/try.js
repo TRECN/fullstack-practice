@@ -8,7 +8,7 @@
  */
 
 try{
-    functionthatnotexist();
+    throw "the error"
 }catch(error){
     console.log("error is: ",error)
 }
