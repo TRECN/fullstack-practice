@@ -15,3 +15,8 @@ class MyClassName{
 const thing=new MyClassName();
 
 thing.speak()
+
+//using constructor
+class myName{
+    myName
+}
