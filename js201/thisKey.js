@@ -1,8 +1,8 @@
 const person121={
     'name':"rishabh",
-    speak(){
-        console.log("say some thing")
+    speak(name){
+        console.log(name)
     }
 }
 
-person121.speak()
+person121.speak("Rishabh")
