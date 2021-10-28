@@ -4,3 +4,5 @@ const person121={
         console.log("say some thing")
     }
 }
+
+person121.speak()
