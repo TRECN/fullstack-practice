@@ -1,7 +1,7 @@
 
 //without this keyword
 const person={
-    'name':"rishabh",
+    'name':"person",
     speak(){
         console.log(person['name'])
     }
@@ -10,7 +10,7 @@ const person={
 
 //with this keyword
 const person1={
-    'name':"rishabh",
+    'name':"person1",
     speak(){
         console.log(this.name)
     }
