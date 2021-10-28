@@ -18,5 +18,13 @@ thing.speak()
 
 //using constructor
 class myName{
-    myName
+    constructor(name){
+        this.name=name
+    }
+    greet(){
+        console.log(`hello from ${this.name}`)
+    }
+    
 }
+const rishabh=new myName("rishabh")
+rishabh.greet();
