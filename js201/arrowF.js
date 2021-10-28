@@ -12,3 +12,6 @@ const hello1=()=>{
 }
 console.log(hello1())
 
+//even shorter
+const hello2=()=> "hello rishabh"
+console.log(hello2())
