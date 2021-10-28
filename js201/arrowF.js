@@ -23,3 +23,4 @@ const number=(numm)=>{
     return numm;
 }
 console.log(number(23))
+//this keyword works globally inside a arrow function
