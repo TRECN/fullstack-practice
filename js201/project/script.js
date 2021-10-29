@@ -8,4 +8,6 @@ try{
 catch(error){
     console.log(error)
 }
-console.log(typeof(data))
+finally{
+    console.log(typeof(data))
+}
