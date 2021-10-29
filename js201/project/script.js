@@ -1,5 +1,5 @@
 let obj={}
-let num=prompt('enter the character number')
+let num=Math.ceil(Math.random()*50);
     fetch(`https://swapi.dev/api/people/${num}/`)
         .then(response=>response.json())
         .then(
