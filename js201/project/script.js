@@ -32,7 +32,6 @@ const print=()=>{
     setTimeout(() => {
         console.log(num)
         names.innerHTML=obj['name']
-        planet()
         height.innerHTML=obj['height']
         homeworld.innerHTML=world['name']
     
@@ -42,10 +41,8 @@ const reset=()=>{
     Fetch()
     setTimeout(()=>{
         planet() 
-    print()  
+        print()  
     },1000)
-     
-    
 }
 
     
