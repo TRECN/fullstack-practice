@@ -8,6 +8,6 @@ let obj={}
             }
         )
 
-if(dat!=undefined){
+setTimeout(() => {
     console.log(obj)
-}
+}, (5000));
