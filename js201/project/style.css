@@ -4,7 +4,10 @@ body{
     justify-content: center;
     align-items: center;
     background-image: url('./Star_Wars_logo-1.png');
-    background-position: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 .container{
     display: flex;
