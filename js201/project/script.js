@@ -15,11 +15,9 @@ const Fetch=()=>{
 
 const print=()=>{
     setTimeout(() => {
-        console.log(obj['name'])
-        console.log(num)
         names.innerHTML=obj['name']
     
-    }, (300));
+    }, (500));
 }
 const reset=()=>{
     Fetch()
