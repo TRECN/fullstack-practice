@@ -1,5 +1,5 @@
 let obj={}
-let num=Math.ceil(Math.random()*100);
+let num=Math.ceil(Math.random()*18);
 
 const names=document.getElementById('name')
 
