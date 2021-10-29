@@ -1,7 +1,7 @@
 let obj={}
 let num=Math.ceil(Math.random()*100);
 
-const name=document.getElementById('#name')
+const names=document.getElementById('name')
 
 
     fetch(`https://swapi.dev/api/people/${num}/`)
@@ -15,7 +15,7 @@ const name=document.getElementById('#name')
 setTimeout(() => {
     console.log(obj['name'])
     console.log(num)
-    
+    names.innerHTML=obj['name']
 
 }, (1000));
 
