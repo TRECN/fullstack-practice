@@ -38,6 +38,9 @@ const print=()=>{
     }, (1000));
 }
 const reset=()=>{
+    names.innerHTML='xxxxx'
+        height.innerHTML='xxxxxx'
+        homeworld.innerHTML='xxxxxx'
     Fetch()
     setTimeout(()=>{
         planet() 
