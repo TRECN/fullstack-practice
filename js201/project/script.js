@@ -12,30 +12,19 @@ const Fetch=()=>{
     )
 }
 
+const print=()=>{
+    setTimeout(() => {
+        console.log(obj['name'])
+        console.log(num)
+        names.innerHTML=obj['name']
+    
+    }, (1000));
+}
 
 const reset=()=>{
-    num=Math.ceil(Math.random()*50);
-    fetch(`https://swapi.dev/api/people/${num}/`)
-        .then(response=>response.json())
-        .then(
-            dat=>{
-                obj=dat
-            }
-        )
-        setTimeout(() => {
-            console.log(obj['name'])
-            console.log(num)
-            names.innerHTML=obj['name']
-        
-        }, (1000));
         
 }
-setTimeout(() => {
-    console.log(obj['name'])
-    console.log(num)
-    names.innerHTML=obj['name']
 
-}, (1000));
     
 
 
