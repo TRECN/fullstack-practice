@@ -1,6 +1,6 @@
 let obj={}
-
-    fetch('https://swapi.dev/api/people/1/')
+let num=prompt('enter the character number')
+    fetch(`https://swapi.dev/api/people/${num}/`)
         .then(response=>response.json())
         .then(
             dat=>{
@@ -10,4 +10,4 @@ let obj={}
 
 setTimeout(() => {
     console.log(obj)
-}, (5000));
+}, (1000));
