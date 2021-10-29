@@ -38,7 +38,12 @@ const print=()=>{
 }
 const reset=()=>{
     Fetch()
-    print()    
+    setTimeout(()=>{
+        planet() 
+    print()  
+    },1000)
+     
+    
 }
 
     
