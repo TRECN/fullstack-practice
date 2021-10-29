@@ -11,7 +11,7 @@ fetch(`https://swapi.dev/api/people/${num}/`)
         }
     )
 const reset=()=>{
-    num=Math.ceil(Math.random()*18);
+    num=Math.ceil(Math.random()*50);
     fetch(`https://swapi.dev/api/people/${num}/`)
         .then(response=>response.json())
         .then(
