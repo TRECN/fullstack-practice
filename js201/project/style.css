@@ -33,7 +33,7 @@ body{
 }
 .heading{
     font-size: 25px;
-    
+
 }
 .detail{
     display: flex;
@@ -41,4 +41,14 @@ body{
     align-items: center;
     flex-direction: column;
     margin: 20px;
+}
+button{
+    -webkit-appearance: none;
+    border:2px solid yellow;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: black;
+    color: yellow;
+    font-size: 20px;
+    
 }
