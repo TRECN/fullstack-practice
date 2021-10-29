@@ -1,8 +1,9 @@
 let obj={}
 const names=document.getElementById('name')
-let num=Math.ceil(Math.random()*18);
+let num;
 
 const Fetch=()=>{
+    num=Math.ceil(Math.random()*18);
     fetch(`https://swapi.dev/api/people/${num}/`)
     .then(response=>response.json())
     .then(
