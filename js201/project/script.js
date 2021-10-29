@@ -20,9 +20,9 @@ const print=()=>{
     
     }, (1000));
 }
-
 const reset=()=>{
-        
+    Fetch()
+    print()    
 }
 
     
