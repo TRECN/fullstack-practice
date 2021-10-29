@@ -1,5 +1,6 @@
 let obj={}
 const names=document.getElementById('name')
+const height=document.getElementById('height')
 let num;
 
 const Fetch=()=>{
@@ -16,6 +17,7 @@ const Fetch=()=>{
 const print=()=>{
     setTimeout(() => {
         names.innerHTML=obj['name']
+        height.innerHTML=obj['height']
     
     }, (500));
 }
