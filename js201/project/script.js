@@ -1,5 +1,5 @@
 let obj={}
-let homeworld=''
+let homeworld={}
 const names=document.getElementById('name')
 const height=document.getElementById('height')
 let num;
@@ -16,22 +16,25 @@ const Fetch=()=>{
 }
 
 const planet=()=>{
+    console.log(obj['homeworld'])
     fetch(obj['homeworld'])
     .then(response=>response.json())
     .then(
-        dat=>{
-            homeworld=dat['homeworld']
+        data=>{
+            homeworld=data
+            console.log(homeworld)
         }
     )
 }
 
 const print=()=>{
     setTimeout(() => {
+        console.log(num)
         names.innerHTML=obj['name']
         planet()
-        height.innerHTML=homeworld
+        height.innerHTML=homeworld['name']
     
-    }, (500));
+    }, (1000));
 }
 const reset=()=>{
     Fetch()
