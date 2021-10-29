@@ -19,7 +19,7 @@ const print=()=>{
         console.log(num)
         names.innerHTML=obj['name']
     
-    }, (1000));
+    }, (300));
 }
 const reset=()=>{
     Fetch()
