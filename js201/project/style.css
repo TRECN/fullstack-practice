@@ -1,7 +1,9 @@
 body{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-image: url('./Star_Wars_logo-1.png');
+    background-position: center;
 }
 .container{
     display: flex;
@@ -10,8 +12,4 @@ body{
     justify-content: center;
     border: 1px solid red;
     width: 500px;
-}
-.name{
-    align-items: center;
-    justify-content: center;
 }
