@@ -16,7 +16,17 @@ const Fetch=()=>{
     )
 }
 
-
+const planet=()=>{
+    console.log(obj['homeworld'])
+    fetch(obj['homeworld'])
+    .then(response=>response.json())
+    .then(
+        data=>{
+            world=data
+            console.log(world)
+        }
+    )
+}
 
 const print=()=>{
     setTimeout(() => {
