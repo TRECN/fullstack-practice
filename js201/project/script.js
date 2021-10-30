@@ -41,7 +41,7 @@ const reset=()=>{
     names.innerHTML='xxxxx'
         height.innerHTML='xxxxxx'
         homeworld.innerHTML='xxxxxx'
-    if(num==17){
+    if(num=='17'){
         num++;
     }
     Fetch()
