@@ -5,7 +5,16 @@ const height=document.getElementById('height')
 const homeworld=document.getElementById('homeworld')
 let num;
 
-
+const Fetch=()=>{
+    num=Math.ceil(Math.random()*18);
+    fetch(`https://swapi.dev/api/people/${num}/`)
+    .then(response=>response.json())
+    .then(
+        dat=>{
+            obj=dat
+        }
+    )
+}
 
 const planet=()=>{
     console.log(obj['homeworld'])
