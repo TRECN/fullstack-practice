@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-        <div id="customId"></div>
+        
 
 
 
@@ -15,10 +15,7 @@
 
     
     <script>
-        $(document).ready(function(){
-            $('#customId').html("<h1>Rishabh<span>text</span></h1>");
-            $('span').text("Changed")
-        })
+       
     </script>
 </body>
 </html>
