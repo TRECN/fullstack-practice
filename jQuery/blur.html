@@ -7,6 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <textarea name="mytextarea" cols="30" rows="10"></textarea>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script>
+       $(document).ready(()=>{
+           $("[name='mytextarea']")
+            .on("focus",function(){
+                console.log("you focused")
+            })
+                
+       })
+    </script>
 </body>
 </html>
