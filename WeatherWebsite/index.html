@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Weather App</h1>
+    <div class="search-bar">
+      <input type="text" id="locationInput" placeholder="Enter location">
+      <button id="searchButton">Search</button>
+    </div>
+    <div class="weather-details">
+      <div class="today-weather">
+        <h2 class="section-title">Today's Weather</h2>
+        <div class="weather-card">
+          <h3 class="city-name" id="cityName"></h3>
+          <div class="weather-info">
+            <div class="temperature" id="temperature"></div>
+            <div class="toggle-container">
+              <label class="toggle-label">
+                <input type="checkbox" id="toggleUnits">
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-unit">°C</span>
+            </div>
+          </div>
+          <div class="weather-description" id="description"></div>
+          <div class="extra-info">
+            <div class="info-item" id="windSpeed"></div>
+            <div class="info-item" id="humidity"></div>
+          </div>
+        </div>
+      </div>
+      <div class="weekly-weather">
+        <h2 class="section-title">Weekly Weather</h2>
+        <div class="weekly-weather-cards" id="weeklyWeather"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
