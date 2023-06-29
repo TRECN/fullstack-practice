@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var apiKey = "3bdb8ccccbc9a2bc4a2a07e4acdb6411"; // Replace with your OpenWeatherMap API key
-    var units = "metric"; // Default units
+    var apiKey = "3bdb8ccccbc9a2bc4a2a07e4acdb6411"; 
+    var units = "metric"; 
   
-    // Function to fetch weather data for a given location
     function fetchWeatherData(location) {
       var url =
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
   
-    // Function to display today's weather
+    // Displaying today's weather
     function displayWeather(data) {
       var cityName = document.getElementById("cityName");
       var temperature = document.getElementById("temperature");
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       humidity.textContent = "Humidity: " + data.main.humidity + "%";
     }
   
-    // Function to display weekly weather
+    // Displaying weekly weather
     function displayWeeklyWeather(data) {
       var weeklyWeather = data.list;
       var weeklyWeatherContainer = document.getElementById("weeklyWeather");
@@ -102,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   
-    // Function to get the selected temperature unit
+    // Getting unit
     function getTemperatureUnit() {
       var toggleUnits = document.getElementById("toggleUnits");
       return toggleUnits.checked ? "°F" : "°C";
@@ -114,10 +113,14 @@ document.addEventListener("DOMContentLoaded", function () {
       var location = locationInput.value;
       fetchWeatherData(location);
     }
-  
+    
     // Event listeners
     var searchButton = document.getElementById("searchButton");
     searchButton.addEventListener("click", handleSearch);
+    document.addEventListener('keydown',(e)=>{
+        if(e.key==="Enter")
+            handleSearch();
+      })
   
     var toggleUnits = document.getElementById("toggleUnits");
     toggleUnits.addEventListener("change", function () {
@@ -207,4 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
     fetchCurrentLocationWeather();
   });
+
+ 
   
