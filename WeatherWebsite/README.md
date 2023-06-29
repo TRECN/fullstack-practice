@@ -14,8 +14,8 @@ OpenWeatherMap API
 1. Clone the repository:
    git clone https://github.com/TRECN/fullstack-practice/tree/master/WeatherWebsite
 2. Navigate to the project directory:
-   cd advanced-weather-website
-   
-   Open the index.html file in your web browser.
+   - cd advanced-weather-website
+   - Open the index.html file in your web browser.
 
+## Image
 ![demo](https://github.com/TRECN/fullstack-practice/assets/78320320/1ddb9aaf-c9cd-4afa-a7eb-4d7c8c775287)
