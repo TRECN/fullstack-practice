@@ -18,3 +18,4 @@ OpenWeatherMap API
    
    Open the index.html file in your web browser.
 
+<img src="demo.png" width="75%">
