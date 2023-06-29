@@ -12,7 +12,7 @@ Toggle between Fahrenheit and Celsius units for temperature display
 OpenWeatherMap API
 ## Installation
 1. Clone the repository:
-   git clone (https://github.com/TRECN/fullstack-practice/tree/master/WeatherWebsite)
+   git clone https://github.com/TRECN/fullstack-practice/tree/master/WeatherWebsite
 2. Navigate to the project directory:
    cd advanced-weather-website
    
