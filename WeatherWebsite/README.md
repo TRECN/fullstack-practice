@@ -18,4 +18,4 @@ OpenWeatherMap API
    
    Open the index.html file in your web browser.
 
-<img src="demo.png" width="75%">
+![demo](https://github.com/TRECN/fullstack-practice/assets/78320320/1ddb9aaf-c9cd-4afa-a7eb-4d7c8c775287)
